@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'Site Name',
-  title: 'Site Title',
-  description: 'Site Description',
-  locale: 'en',
+  site_name: "Omar Dini",
+  title: "Omar Dini",
+  description: "Omar Dini's personal blog",
+  locale: "en",
 };
