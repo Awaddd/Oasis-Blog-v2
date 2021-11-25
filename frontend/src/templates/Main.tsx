@@ -9,11 +9,11 @@ type IMainProps = {
 };
 
 const Main = ({ meta, children }: IMainProps) => (
-  <div className="w-full antialiased">
-    <div className="max-w-screen-md mx-auto">
-      {/* <Nav meta={meta} /> */}
-      <div className="py-5 text-xl content">{children}</div>
-      {/* <Footer /> */}
+  <div className="flex flex-col w-full h-screen antialiased">
+    <div className="">
+      <Nav meta={meta} />
+      <main className="h-full px-4 py-7">{children}</main>
+      <Footer />
     </div>
   </div>
 );

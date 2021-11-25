@@ -35,7 +35,7 @@ const Index = () => {
   return (
     <Main meta={META}>
       <h1 className="text-2xl font-bold">Hello World</h1>
-      <section className="grid grid-cols-3 gap-2 my-4">
+      <section className="grid gap-4 my-4 md:grid-cols-3">
         {articles.map(({ id, title, subtitle, image }: Article, key: number) => (
           <Link href={`/article/${id}`} key={key}>
             <article className="grid p-4 border border-gray-400 cursor-pointer">
