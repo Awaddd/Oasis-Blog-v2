@@ -13,8 +13,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     },
     "subtitle": {
       "type": "string"
@@ -34,9 +34,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "date_created": {
-      "type": "datetime"
     }
   }
 }

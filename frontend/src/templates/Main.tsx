@@ -11,9 +11,9 @@ type IMainProps = {
 const Main = ({ meta, children }: IMainProps) => (
   <div className="w-full antialiased">
     <div className="max-w-screen-md mx-auto">
-      <Nav meta={meta} />
+      {/* <Nav meta={meta} /> */}
       <div className="py-5 text-xl content">{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </div>
 );
