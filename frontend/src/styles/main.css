@@ -4,10 +4,23 @@
 
 @tailwind utilities;
 
+.global-padding {
+  @apply px-6 md:px-10 sm:px-7;
+}
+
 .brand {
   font-family: "Courier Prime", monospace;
   font-size: 1.6rem;
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 1;
+}
+
+.burger {
+  width: 100%;
+}
+.burger button {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
 }
