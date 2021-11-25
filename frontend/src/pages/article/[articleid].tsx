@@ -18,7 +18,7 @@ const Article = () => {
   const { articleid } = query
 
   // const { isLoading, error, data } = useQuery('article', getArticle)
-  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { id: 1 }));
+  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { id: articleid }));
 
   if (error) return <p>Error...</p>
   if (isLoading) return <p>Loading...</p>

@@ -3,7 +3,7 @@ import { gql } from 'graphql-request'
 import { client } from '../services/api';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
-import { useEffect } from 'react';
+import Link from 'next/link';
 
 const META = (
   <Meta
@@ -36,14 +36,16 @@ const Index = () => {
     <Main meta={META}>
       <h1 className="text-2xl font-bold">Hello World</h1>
       <section className="grid grid-cols-3 gap-2 my-4">
-        {articles.map(({ title, subtitle, image }: Article, key: number) => (
-          <article className="grid p-4 border border-gray-400 cursor-pointer" key={key}>
-            <h2 className="text-2xl font-bold">{title}</h2>
-            {subtitle && <p className="m-0 text-sm font-semibold">{subtitle}</p>}
-            <div className="self-end">
-              {image?.url && <img src={`http://localhost:1337${image.url}`} className="mt-6 bg-red-200" />}
-            </div>
-          </article>
+        {articles.map(({ id, title, subtitle, image }: Article, key: number) => (
+          <Link href={`/article/${id}`} key={key}>
+            <article className="grid p-4 border border-gray-400 cursor-pointer">
+              <h2 className="text-2xl font-bold">{title}</h2>
+              {subtitle && <p className="m-0 text-sm font-semibold">{subtitle}</p>}
+              <div className="self-end">
+                {image?.url && <img src={`http://localhost:1337${image.url}`} className="h-48 mt-6" />}
+              </div>
+            </article>
+          </Link>
         ))}
       </section>
     </Main>
