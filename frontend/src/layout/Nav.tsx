@@ -11,10 +11,7 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
 
   const { error, isLoading, data } = useQuery('categories', async () => await client.request(CATEGORIES));
 
-  if (isLoading) return <p>Loading...</p>
   if (error) return <p>Error...</p>
-
-  const { categories } = data
 
   return (
     <nav className={`grid items-end w-full grid-flow-col-dense py-4 antialiased global-padding ${open && "bg-gray-900 text-gray-200 md:bg-white md:text-black"}`}>
@@ -29,21 +26,26 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
         <Burger opened={open} onClick={() => setOpen(open => !open)} size="md" color={`${open ? "white" : "black"}`} />
       </div>
 
-      {open && (
-        <div className="flex flex-col col-start-1 col-end-3 row-start-2 gap-2 py-4 md:hidden">
-          <Link href="/">Home</Link>
-          {categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
-            <Link href={`/${pluralName}`} key={key}>{pluralName}</Link>
-          ))}
-        </div>
+      {!isLoading && !error && data && (
+        <>
+          {open && (
+            <div className="flex flex-col col-start-1 col-end-3 row-start-2 gap-2 py-4 md:hidden">
+              <Link href="/">Home</Link>
+              {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
+                <Link href={`/${pluralName}`} key={key}>{pluralName}</Link>
+              ))}
+            </div>
+          )}
+
+          <div className="justify-end hidden gap-6 justify-self-end md:flex">
+            <Link href="/">Home</Link>
+            {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
+              <Link href={`/${pluralName}`} key={key}>{pluralName}</Link>
+            ))}
+          </div>
+        </>
       )}
 
-      <div className="justify-end hidden gap-6 justify-self-end md:flex">
-        <Link href="/">Home</Link>
-        {categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
-          <Link href={`/${pluralName}`} key={key}>{pluralName}</Link>
-        ))}
-      </div>
     </nav>
   );
 }

@@ -16,11 +16,7 @@ const Index = () => {
 
   const { isLoading, error, data } = useQuery('articles', async () => await client.request(ARTICLES));
 
-  if (isLoading) return (
-    <Main meta={META}>
-      <p>Loading...</p>
-    </Main>
-  )
+  if (isLoading) return null
 
   if (error) return (
     <Main meta={META}>
