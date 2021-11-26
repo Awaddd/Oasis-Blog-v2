@@ -14,7 +14,7 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
   if (error) return <p>Error...</p>
 
   return (
-    <nav className={`grid items-end w-full grid-flow-col-dense py-4 lg:py-7 antialiased global-padding ${open && "bg-gray-900 text-gray-200 md:bg-white md:text-black"}`}>
+    <nav className={`grid items-end w-full grid-flow-col-dense py-4 lg:py-7 md:py-5 antialiased global-padding ${open && "bg-gray-900 text-gray-200 md:bg-white md:text-black"}`}>
 
       {meta}
 
