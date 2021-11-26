@@ -4,7 +4,8 @@ import { gql } from 'graphql-request'
 import { client } from '../services/api';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
-import Link from 'next/link';
+import { Article } from '../utils/types/global';
+import ArticleCardWithLink from '../components/ArticleCardWithLink';
 
 const Index = () => {
 
@@ -32,22 +33,13 @@ const Index = () => {
 
   return (
     <Main meta={META}>
-      <h1 className="text-2xl font-bold">Hello World</h1>
       <section className="grid gap-4 my-4 md:grid-cols-3">
         {isLoading ? (
           <p>Loading...</p>
         ) : (
           <>
-            {articles.map(({ id, title, subtitle, image }: Article, key: number) => (
-              <Link href={`/article/${id}`} key={key}>
-                <article className="grid p-4 border border-gray-400 cursor-pointer">
-                  <h2 className="text-2xl font-bold">{title}</h2>
-                  {subtitle && <p className="m-0 text-sm font-semibold">{subtitle}</p>}
-                  <div className="self-end">
-                    {image?.url && <img src={`http://localhost:1337${image.url}`} className="h-48 mt-6" />}
-                  </div>
-                </article>
-              </Link>
+            {articles.map((data: Article, key: number) => (
+              <ArticleCardWithLink data={data} key={key} />
             ))}
           </>
         )}
@@ -55,15 +47,6 @@ const Index = () => {
     </Main>
   );
 };
-
-type Article = {
-  id: number,
-  title: string,
-  subtitle?: string,
-  image?: {
-    url: string
-  }
-}
 
 const ARTICLES = gql`
   query GetArticlesByCategory($category: String!) {

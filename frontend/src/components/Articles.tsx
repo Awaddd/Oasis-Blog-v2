@@ -1,7 +1,8 @@
 import { gql } from 'graphql-request';
 import { useQuery } from 'react-query';
 import { client } from '../services/api';
-import Link from 'next/link';
+import { Article } from '../utils/types/global';
+import ArticleCardWithLink from './ArticleCardWithLink';
 
 const Articles = () => {
 
@@ -17,32 +18,11 @@ const Articles = () => {
 
   return (
     <>
-      {articles.map(({ id, title, subtitle, image }: Article, key: number) => (
-        <Link href={`/article/${id}`} key={key}>
-          <article className="grid p-4 border border-gray-400 cursor-pointer">
-            <h2 className="text-2xl font-bold">{title}</h2>
-            {subtitle && <p className="m-0 text-sm font-semibold">{subtitle}</p>}
-            <div className="self-end">
-              {image?.url && (
-                <div className="mt-4">
-                  <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-48" />
-                </div>
-              )}
-            </div>
-          </article>
-        </Link>
+      {articles.map((data: Article, key: number) => (
+        <ArticleCardWithLink data={data} key={key} />
       ))}
     </>
   )
-}
-
-type Article = {
-  id: number,
-  title: string,
-  subtitle?: string,
-  image?: {
-    url: string
-  }
 }
 
 const ARTICLES = gql`
