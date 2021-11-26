@@ -24,3 +24,14 @@
   bottom: -4px;
   right: 0;
 }
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  @apply mt-4;
+}
+
+.content p {
+  @apply mt-2;
+}
