@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hero-image",
+      "handler": "hero-image.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hero-image",
+      "handler": "hero-image.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hero-image",
+      "handler": "hero-image.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

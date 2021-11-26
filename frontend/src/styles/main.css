@@ -8,6 +8,18 @@
   @apply px-6 md:px-10 sm:px-7 lg:px-20;
 }
 
+.reverse-global-padding {
+  @apply -mx-6 md:-mx-10 sm:-mx-7 lg:-mx-20;
+}
+
+.global-page-padding {
+  @apply py-4 sm:py-7;
+}
+
+.reverse-global-page-padding {
+  @apply -my-4 sm:-my-7;
+}
+
 h1,
 h2,
 h3,
@@ -17,6 +29,7 @@ h4 {
 
 h1 {
   @apply text-5xl font-bold;
+  line-height: 1.1;
 }
 
 h2 {
