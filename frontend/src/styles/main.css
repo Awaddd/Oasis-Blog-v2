@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .global-padding {
-  @apply px-6 md:px-10 sm:px-7;
+  @apply px-6 md:px-10 sm:px-7 lg:px-20;
 }
 
 h1,
