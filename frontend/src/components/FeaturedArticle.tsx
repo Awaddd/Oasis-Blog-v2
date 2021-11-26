@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
-import { gql } from 'graphql-request'
-import { client } from '../services/api'
+import { gql } from 'graphql-request';
+import { client } from '../services/api';
 
 const FeaturedArticle = () => {
 
