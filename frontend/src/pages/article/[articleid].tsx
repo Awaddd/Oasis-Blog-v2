@@ -33,7 +33,13 @@ const Article = () => {
           <h1>{title}</h1>
           {subtitle && <h2 className="font-semibold">{subtitle}</h2>}
         </section>
-        {image?.url && <img src={`http://localhost:1337${image.url}`} alt="" />}
+
+        {image?.url && (
+          <div>
+            <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-64" />
+          </div>
+        )}
+
         <article className="content">
           <Markdown>{content}</Markdown>
         </article>
