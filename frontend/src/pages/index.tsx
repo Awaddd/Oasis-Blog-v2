@@ -4,6 +4,7 @@ import { client } from '../services/api';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 import Link from 'next/link';
+import FeaturedArticle from '../components/FeaturedArticle'
 
 const META = (
   <Meta
@@ -30,7 +31,10 @@ const Index = () => {
 
   return (
     <Main meta={META}>
-      <h1 className="text-2xl font-bold">Hello World</h1>
+      <section className="my-4">
+        <FeaturedArticle />
+      </section>
+
       <section className="grid gap-4 my-4 md:grid-cols-3">
         {articles.map(({ id, title, subtitle, image }: Article, key: number) => (
           <Link href={`/article/${id}`} key={key}>
