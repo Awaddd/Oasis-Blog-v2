@@ -24,7 +24,7 @@ const Articles = () => {
             {subtitle && <p className="m-0 text-sm font-semibold">{subtitle}</p>}
             <div className="self-end">
               {image?.url && (
-                <div>
+                <div className="mt-4">
                   <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-48" />
                 </div>
               )}

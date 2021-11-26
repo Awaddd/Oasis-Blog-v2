@@ -4,6 +4,9 @@
 # fixed footer (shows when there isn't alot of content)
 # empty category message
 
+later:
+# server side render articles
+
 minor:
 # brand logo should be a link to home
-# 
+# image-less card
