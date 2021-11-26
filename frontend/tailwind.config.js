@@ -41,6 +41,13 @@ module.exports = {
           900: "#2a4365",
         },
       },
+      spacing: {
+        xs: "4px",
+        sm: "7px",
+        md: "14px",
+        lg: "30px",
+        xl: "60px",
+      },
     },
   },
   variants: {},
