@@ -1,0 +1,9 @@
+# typography
+# home design
+# post design
+# fixed footer (shows when there isn't alot of content)
+# empty category message
+
+minor:
+# brand logo should be a link to home
+# 
