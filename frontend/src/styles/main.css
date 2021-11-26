@@ -8,6 +8,29 @@
   @apply px-6 md:px-10 sm:px-7;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  @apply font-semibold;
+}
+
+h1 {
+  @apply text-5xl font-bold;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
 .brand {
   font-family: "Courier Prime", monospace;
   font-size: 1.6rem;
@@ -19,6 +42,7 @@
 .burger {
   width: 100%;
 }
+
 .burger button {
   position: absolute;
   bottom: -4px;
