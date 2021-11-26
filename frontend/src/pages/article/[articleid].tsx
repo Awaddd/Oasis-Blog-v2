@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
 import { gql } from 'graphql-request'
 import { client } from '../../services/api';
+import Markdown from 'react-markdown';
 
 const META = (
   <Meta
@@ -27,12 +28,16 @@ const Article = () => {
 
   return (
     <Main meta={META}>
-      <h1 className="text-2xl font-bold">{title}</h1>
-      {subtitle && <h2>{subtitle}</h2>}
-      {image?.url && <img src={`http://localhost:1337${image.url}`} alt="" />}
-      <article>
-        {content}
-      </article>
+      <div className="md:w-2/3 md:mx-auto">
+        <section className="py-4 text-center">
+          <h1>{title}</h1>
+          {subtitle && <h2 className="font-semibold">{subtitle}</h2>}
+        </section>
+        {image?.url && <img src={`http://localhost:1337${image.url}`} alt="" />}
+        <article className="content">
+          <Markdown>{content}</Markdown>
+        </article>
+      </div>
     </Main>
   );
 };
