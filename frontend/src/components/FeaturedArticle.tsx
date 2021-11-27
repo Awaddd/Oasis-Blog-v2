@@ -11,14 +11,23 @@ const FeaturedArticle = () => {
   if (error) return <p>Error...</p>
   if (!data) return <p>Invalid ID</p>
 
-  const { title, image } = data.article
+  const { title, subtitle, image } = data.article
 
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className="md:grid md:grid-cols-2">
+      <div className="md:grid">
+        <div className="text-center md:justify-self-start md:text-left mt-sm md:mt-md">
+          <div className="grid grid-cols-2">
+            <p className="justify-self-start">Featured</p>
+            <p className="justify-self-end">Nov. 11</p>
+          </div>
+          <h1 className="md:leading-10 md:underline md:text-4xl md:font-bold md:mt-sm">{title}</h1>
+          {subtitle && <p className="mt-xs md:mt-sm">{subtitle}</p>}
+        </div>
+      </div>
       {image?.url && (
-        <div className="mt-md">
-          <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-64" />
+        <div className="mt-md md:mt-0">
+          <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-64 md:h-80" />
         </div>
       )}
     </div>
@@ -37,6 +46,7 @@ const Article = gql`
   query GetFeaturedArticle($id: ID!) {
     article(id: $id) {
       title
+      subtitle
       image {
         url
       }

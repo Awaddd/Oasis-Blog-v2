@@ -16,8 +16,8 @@
   @apply py-xs sm:py-sm;
 }
 
-.reverse-global-page-padding {
-  @apply -my-xs sm:-my-sm;
+.reverse-top-global-page-padding {
+  @apply -mt-xs sm:-mt-sm;
 }
 
 h1,
