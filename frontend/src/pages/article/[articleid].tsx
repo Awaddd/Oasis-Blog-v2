@@ -30,8 +30,8 @@ const Article = () => {
     <Main meta={META}>
       <div className="md:w-2/3 md:mx-auto">
         <section className="py-4 text-center">
-          <h1>{title}</h1>
-          {subtitle && <h2 className="font-semibold">{subtitle}</h2>}
+          <h1 className="font-bold">{title}</h1>
+          {subtitle && <h2 className="font-normal">{subtitle}</h2>}
         </section>
 
         {image?.url && (
