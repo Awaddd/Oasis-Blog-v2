@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 .global-padding {
-  @apply px-md lg:px-xl;
+  @apply px-md md:px-lg lg:px-2xl;
 }
 
 .reverse-global-padding {
-  @apply -mx-md lg:-mx-xl;
+  @apply -mx-md md:-mx-lg lg:-mx-2xl;
 }
 
 .global-page-padding {

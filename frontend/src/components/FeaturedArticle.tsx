@@ -14,7 +14,7 @@ const FeaturedArticle = () => {
   const { title, subtitle, image } = data.article
 
   return (
-    <div className="md:grid md:grid-cols-2">
+    <div className="md:grid md:grid-cols-2 md:gap-4">
       <div className="md:grid">
         <div className="text-center md:justify-self-start md:text-left mt-sm md:mt-md">
           <div className="grid grid-cols-2">

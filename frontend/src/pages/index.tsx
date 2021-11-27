@@ -15,7 +15,6 @@ const Index = () => {
 
   return (
     <Main meta={META}>
-
       <section className="reverse-global-padding reverse-top-global-page-padding">
         <HeroImage />
       </section>
@@ -24,7 +23,7 @@ const Index = () => {
         <FeaturedArticle />
       </section>
 
-      <section className="grid gap-md md:gap-lg md:mt-lg mt-md md:grid-cols-3">
+      <section className="grid gap-md lg:gap-lg lg:mt-xl md:mt-lg mt-md md:grid-cols-3">
         <Articles />
       </section>
     </Main>
