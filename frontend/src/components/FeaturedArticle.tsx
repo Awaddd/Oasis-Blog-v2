@@ -8,8 +8,7 @@ const FeaturedArticle = () => {
   const { isLoading, error, data } = useQuery('featuredArticle', async () => await client.request(Article, { id: temp.featuredArticle.id }), { enabled: temp ? true : false })
 
   if (isLoading) return null
-  if (error) return <p>Error...</p>
-  if (!data) return <p>Invalid ID</p>
+  if (error || !data) return null
 
   const { title, subtitle, image } = data.article
 

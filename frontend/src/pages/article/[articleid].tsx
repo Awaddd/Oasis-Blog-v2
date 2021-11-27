@@ -21,8 +21,8 @@ const Article = () => {
   // const { isLoading, error, data } = useQuery('article', getArticle)
   const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { id: articleid }));
 
-  if (error) return <p>Error...</p>
-  if (isLoading) return <p>Loading...</p>
+  if (error) return <p>Could not load the article. Please try again later</p>
+  if (isLoading) return null
 
   const { title, subtitle, content, image } = data.article
 
