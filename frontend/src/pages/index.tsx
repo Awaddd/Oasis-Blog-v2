@@ -20,11 +20,11 @@ const Index = () => {
         <HeroImage />
       </section>
 
-      <section className="my-4">
+      <section className="my-xl">
         <FeaturedArticle />
       </section>
 
-      <section className="grid gap-4 my-4 md:grid-cols-3">
+      <section className="grid gap-md my-md md:grid-cols-3">
         <Articles />
       </section>
     </Main>

@@ -17,7 +17,7 @@ const FeaturedArticle = () => {
     <div>
       <h1>{title}</h1>
       {image?.url && (
-        <div>
+        <div className="mt-md">
           <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-64" />
         </div>
       )}
