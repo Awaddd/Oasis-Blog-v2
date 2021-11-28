@@ -9,12 +9,10 @@ type IMainProps = {
 };
 
 const Main = ({ meta, children }: IMainProps) => (
-  <div className="flex flex-col w-full h-screen antialiased">
-    <div className="">
-      <Nav meta={meta} />
-      <main className="h-full global-padding global-page-padding">{children}</main>
-      <Footer />
-    </div>
+  <div className="flex flex-col w-full h-full antialiased">
+    <Nav meta={meta} />
+    <main className="h-full global-padding global-page-padding">{children}</main>
+    <Footer />
   </div>
 );
 
