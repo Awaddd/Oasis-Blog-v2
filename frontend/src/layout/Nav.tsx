@@ -33,7 +33,7 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
       {!isLoading && !error && data && (
         <>
           {open && (
-            <div className="flex flex-col col-start-1 col-end-3 row-start-2 gap-2 py-4 md:hidden">
+            <div className="flex flex-col col-start-1 col-end-3 row-start-2 gap-2 py-4 text-right md:hidden mr-sm">
               <Link href="/">
                 <a className={`${router.pathname === '/' && 'text-pink-500'}`}>Home</a>
               </Link>
