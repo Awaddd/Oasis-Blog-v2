@@ -31,6 +31,7 @@ const ARTICLES = gql`
       id
       title
       subtitle
+      slug
       image {
         url
       }

@@ -6,25 +6,19 @@ import { gql } from 'graphql-request'
 import { client } from '../../services/api';
 import Markdown from 'react-markdown';
 
-const META = (
-  <Meta
-    title="How to setup a blog with strapi"
-    description="Article"
-  />
-);
-
 const Article = () => {
 
   const { query } = useRouter()
-  const { articleid } = query
+  const { slug } = query
 
-  // const { isLoading, error, data } = useQuery('article', getArticle)
-  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { id: articleid }));
+  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { slug: slug }));
 
   if (error) return <p>Could not load the article. Please try again later</p>
   if (isLoading) return null
 
-  const { title, subtitle, content, image } = data.article
+  const { title, subtitle, content, image } = data.articles[0]
+
+  const META = <Meta title={title} description={subtitle} />
 
   return (
     <Main meta={META}>
@@ -51,8 +45,9 @@ const Article = () => {
 
 
 const ARTICLE = gql`
-  query GetArticle($id: ID!) {
-    article(id: $id) {
+  query GetArticleBySlug($slug: String!) {
+    articles(where: { slug: $slug }) {
+      title
       id
       title
       subtitle

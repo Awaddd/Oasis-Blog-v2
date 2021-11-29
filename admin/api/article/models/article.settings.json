@@ -39,6 +39,11 @@
     "category": {
       "model": "category",
       "via": "articles"
+    },
+    "slug": {
+      "type": "string",
+      "required": false,
+      "unique": true
     }
   }
 }

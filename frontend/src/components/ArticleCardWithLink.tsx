@@ -8,7 +8,7 @@ type LinkProps = {
 };
 
 const ArticleCardWithLink = forwardRef<HTMLDivElement, LinkProps>(({ data }, ref) => (
-  <Link href={`/article/${data.id}`} passHref>
+  <Link href={`/article/${data.slug}`} passHref>
     <div ref={ref}>
       <ArticleCard data={data} />
     </div>
