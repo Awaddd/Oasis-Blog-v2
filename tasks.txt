@@ -2,13 +2,13 @@
 # empty category message
 # call to action on featured post
 # footer social links
+# author + date details on the article page
 # about author page from cms
 # tidy up post page in general
-# specifically improve design of post page for an image-less article
+# specifically improve design of post page for an image-less article - should read like a review/journal
 # sort out linebreaks on rich content
 # tags?
 # featured post design on mobile!
-# separate imageless cards from actual cards?
 # text-size on mobile?
 # improve design of cards, especially image-less
 # clean up
@@ -22,7 +22,9 @@ minor:
 # brand logo should be a link to home
 
 done (listed):
-# typography -d
-# home design -d
-# post design -d
-# image-less card -d
+# typography
+# home design
+# post design
+# image-less card
+# slug
+# separate imageless cards from actual cards?
