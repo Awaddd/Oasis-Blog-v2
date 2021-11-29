@@ -12,8 +12,6 @@ const Articles = () => {
 
   if (error) return <p>Error...</p>
 
-  console.log(data.articles)
-
   const { articles } = data;
 
   return (
@@ -27,7 +25,7 @@ const Articles = () => {
 
 const ARTICLES = gql`
   query GetArticles {
-    articles {
+    articles (where: {category: { name: "Article" }}) {
       id
       title
       subtitle
