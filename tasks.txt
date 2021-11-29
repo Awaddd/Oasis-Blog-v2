@@ -1,14 +1,26 @@
 # fixed footer (shows when there isn't alot of content)
 # empty category message
+# call to action on featured post
+# footer social links
+# about author page from cms
+# tidy up post page in general
+# specifically improve design of post page for an image-less article
+# sort out linebreaks on rich content
+# tags?
+# featured post design on mobile!
+# separate imageless cards from actual cards?
+# text-size on mobile?
 
 later:
 # server side render articles
+# comments
+# contact
 
 minor:
 # brand logo should be a link to home
-# image-less card
 
 done (listed):
 # typography -d
 # home design -d
 # post design -d
+# image-less card -d
