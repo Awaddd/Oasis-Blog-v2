@@ -13,7 +13,7 @@ const HeroImage = () => {
 
   return (
     <div className="">
-      <img src={`http://localhost:1337${image.url}`} alt="" className="object-cover w-full h-40 sm:h-60 lg:h-80" />
+      <img src={`http://localhost:1337${image.url}`} alt="" className="heroImage" />
     </div>
   )
 };

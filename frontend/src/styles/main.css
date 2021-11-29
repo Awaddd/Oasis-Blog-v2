@@ -62,6 +62,10 @@ h3 {
   right: 0;
 }
 
+.heroImage {
+  @apply object-cover w-full h-40 sm:h-60 lg:h-80;
+}
+
 .content h1,
 .content h2,
 .content h3,

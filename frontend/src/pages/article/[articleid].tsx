@@ -28,17 +28,18 @@ const Article = () => {
 
   return (
     <Main meta={META}>
+
+      {image?.url && (
+        <div className="reverse-global-padding reverse-top-global-page-padding">
+          <img src={`http://localhost:1337${image.url}`} alt="cover image" className="heroImage" />
+        </div>
+      )}
+
       <div className="md:w-2/3 md:mx-auto">
         <section className="py-4 text-center">
           <h1 className="font-bold">{title}</h1>
           {subtitle && <h2 className="font-normal">{subtitle}</h2>}
         </section>
-
-        {image?.url && (
-          <div>
-            <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-64" />
-          </div>
-        )}
 
         <article className="content">
           <Markdown>{content}</Markdown>
