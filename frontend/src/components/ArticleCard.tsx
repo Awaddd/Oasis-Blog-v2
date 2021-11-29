@@ -14,7 +14,7 @@ const ArticleCard = ({ data }: { data: Article }) => {
           )}
         </div>
         <div className="m-md">
-          <h2 className="text-2xl font-semibold leading-6">{title}</h2>
+          <h2 className="text-2xl font-semibold leading-7">{title}</h2>
           {subtitle && <p className="text-sm mt-sm">{subtitle}</p>}
         </div>
       </article>
@@ -22,9 +22,9 @@ const ArticleCard = ({ data }: { data: Article }) => {
   }
 
   return (
-    <article className="grid p-4 border border-gray-400 cursor-pointer">
-      <h2 className="text-2xl font-bold">{title}</h2>
-      {subtitle && <p className="m-0 text-sm font-semibold">{subtitle}</p>}
+    <article className="grid border-l-4 border-pink-400 cursor-pointer px-md py-xs">
+      <h2 className="text-2xl font-bold leading-7">{title}</h2>
+      {subtitle && <p className="text-sm mt-sm">{subtitle}</p>}
     </article>
   )
 
