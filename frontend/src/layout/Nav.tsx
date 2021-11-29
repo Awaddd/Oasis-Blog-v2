@@ -22,11 +22,11 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
 
       {meta}
 
-      <div className="brand justify-self-start">
+      <div className={`brand justify-self-start ${open && "col-start-1 col-end-2 justify-self-center row-start-1 row-end-3 self-center"}`}>
         Omar Dini<span className={`${open ? "text-pink-500" : "text-primary"}`}>.</span>
       </div>
 
-      <div className="relative justify-self-end md:hidden burger">
+      <div className="relative justify-self-end md:hidden burger p-md">
         <Burger opened={open} onClick={() => setOpen(open => !open)} size="md" color={`${open ? "white" : "black"}`} />
       </div>
 
