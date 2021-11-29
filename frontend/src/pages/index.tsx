@@ -23,7 +23,7 @@ const Index = () => {
         <FeaturedArticle />
       </section>
 
-      <section className="grid gap-md lg:gap-lg lg:mt-xl md:mt-lg mt-md md:grid-cols-3">
+      <section className="lg:mt-xl md:mt-lg mt-md articles">
         <Articles />
       </section>
     </Main>

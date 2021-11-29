@@ -20,6 +20,10 @@
   @apply -mt-xs sm:-mt-sm;
 }
 
+.articles {
+  @apply grid gap-y-lg md:gap-y-xl gap-x-md lg:gap-x-lg md:grid-cols-3;
+}
+
 h1,
 h2,
 h3,

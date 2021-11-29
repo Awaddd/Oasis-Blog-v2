@@ -33,7 +33,7 @@ const Index = () => {
 
   return (
     <Main meta={META}>
-      <section className="grid gap-4 my-4 md:grid-cols-3">
+      <section className="articles">
         {isLoading ? (
           <p>Loading...</p>
         ) : (
