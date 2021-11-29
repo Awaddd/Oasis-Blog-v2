@@ -22,8 +22,8 @@ const ArticleCard = ({ data }: { data: Article }) => {
   }
 
   return (
-    <article className="grid border-l-4 border-pink-400 cursor-pointer px-md py-xs">
-      <h2 className="text-2xl font-bold leading-7">{title}</h2>
+    <article className="grid border-l-4 border-pink-400 shadow cursor-pointer px-lg py-lg my-sm md:my-0">
+      <h2 className="text-2xl font-semibold leading-7 underline">{title}</h2>
       {subtitle && <p className="text-sm mt-sm">{subtitle}</p>}
     </article>
   )
