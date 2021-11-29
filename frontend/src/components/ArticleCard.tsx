@@ -13,7 +13,7 @@ const ArticleCard = ({ data }: { data: Article }) => {
             </div>
           )}
         </div>
-        <div className="m-md">
+        <div className="mt-md mx-md md:mx-lg">
           <h2 className="text-2xl font-semibold leading-7">{title}</h2>
           {subtitle && <p className="text-sm mt-sm">{subtitle}</p>}
         </div>
@@ -22,7 +22,7 @@ const ArticleCard = ({ data }: { data: Article }) => {
   }
 
   return (
-    <article className="grid border-l-4 border-pink-400 shadow cursor-pointer px-lg py-lg my-sm md:my-0">
+    <article className="border-l-4 shadow cursor-pointer border-primary py-lg my-sm md:my-0" style={{ paddingLeft: "26px", paddingRight: "26px" }}>
       <h2 className="text-2xl font-semibold leading-7 underline">{title}</h2>
       {subtitle && <p className="text-sm mt-sm">{subtitle}</p>}
     </article>
