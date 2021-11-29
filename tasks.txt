@@ -10,6 +10,8 @@
 # featured post design on mobile!
 # separate imageless cards from actual cards?
 # text-size on mobile?
+# improve design of cards, especially image-less
+# clean up
 
 later:
 # server side render articles
