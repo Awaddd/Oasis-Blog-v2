@@ -30,9 +30,9 @@ const Article = () => {
       )}
 
       <div className="md:w-2/3 md:mx-auto">
-        <section className="py-4 text-center">
+        <section className="py-md md:mt-md">
           <h1 className="font-bold">{title}</h1>
-          {subtitle && <h2 className="font-normal">{subtitle}</h2>}
+          {subtitle && <h2 className="text-xl font-medium mt-xs">{subtitle}</h2>}
         </section>
 
         <article className="content">

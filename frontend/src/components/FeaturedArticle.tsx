@@ -25,7 +25,7 @@ const FeaturedArticle = () => {
       </div>
       {image?.url && (
         <div className="mt-md md:mt-0">
-          <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-64 md:h-80" />
+          <img src={`http://localhost:1337${image.url}`} alt="cover image" className="object-cover w-full h-48 rounded-lg sm:rounded-md sm:h-52 md:h-64 lg:h-80" />
         </div>
       )}
     </div>

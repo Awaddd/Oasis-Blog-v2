@@ -4,12 +4,16 @@
 
 @tailwind utilities;
 
-.global-padding {
+.nav-padding {
   @apply px-md md:px-lg lg:px-2xl;
 }
 
+.global-padding {
+  @apply px-lg md:px-lg lg:px-2xl;
+}
+
 .reverse-global-padding {
-  @apply -mx-md md:-mx-lg lg:-mx-2xl;
+  @apply -mx-lg md:-mx-lg lg:-mx-2xl;
 }
 
 .global-page-padding {
