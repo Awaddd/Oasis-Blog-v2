@@ -28,6 +28,14 @@
   @apply grid gap-y-lg md:gap-y-xl gap-x-md lg:gap-x-lg md:grid-cols-3;
 }
 
+.overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 7, 7, 0) 60%,
+    rgba(31, 31, 31, 0.705)
+  );
+}
+
 h1,
 h2,
 h3,
