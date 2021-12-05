@@ -23,7 +23,7 @@ const Index = () => {
         <FeaturedArticle />
       </section>
 
-      <section className="lg:mt-xl md:mt-lg mt-md articles">
+      <section className="lg:mt-xl mt-lg articles">
         <Articles />
       </section>
     </Main>
