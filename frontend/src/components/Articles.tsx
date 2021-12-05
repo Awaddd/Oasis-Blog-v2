@@ -25,7 +25,7 @@ const Articles = () => {
 
 const ARTICLES = gql`
   query GetArticles {
-    articles (where: {category: { name: "Article" }}) {
+    articles {
       id
       title
       subtitle
