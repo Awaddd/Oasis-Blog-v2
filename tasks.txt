@@ -1,16 +1,14 @@
 # fixed footer (shows when there isn't alot of content)
+# category page title
 # empty category message
 # call to action on featured post
 # footer social links
 # author + date details on the article page
 # about author page from cms
 # tidy up post page in general
-# specifically improve design of post page for an image-less article - should read like a review/journal
 # sort out linebreaks on rich content
 # tags?
-# featured post design on mobile!
 # text-size on mobile?
-# improve design of cards, especially image-less
 # clean up
 
 later:
@@ -28,3 +26,7 @@ done (listed):
 # image-less card
 # slug
 # separate imageless cards from actual cards?
+# improve design of cards, especially image-less
+# featured post design on mobile
+# specifically improve design of post page for an image-less article 
+- should read like a review/journal (images are now required on all articles)
