@@ -9,6 +9,9 @@
 # sort out linebreaks on rich content
 # tags?
 # text-size on mobile?
+# font-family
+Avenir Next W10 Bold for titles
+& for content use: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 # clean up
 
 later:
