@@ -24,7 +24,7 @@ const FeaturedArticle = () => {
           <h1 className="text-2xl font-bold leading-7 mt-sm md:leading-10 md:underline md:text-4xl">{title}</h1>
         </div>
       </div>
-      <div className="mt-md md:mt-0">
+      <div className="md:mt-0">
         <div className="grid grid-cols-2 mb-xs md:hidden">
           <p className="justify-self-start text-primary">Featured</p>
           <p className="justify-self-end lg:hidden">Nov. 11</p>
