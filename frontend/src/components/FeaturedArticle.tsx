@@ -12,20 +12,20 @@ const FeaturedArticle = () => {
   const { title, subtitle, image } = data.featuredArticle.article
 
   return (
-    <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-4">
-      <div className="md:grid">
+    <div className="flex flex-col-reverse md:flex-row-reverse md:gap-[45px]">
+      <div className="md:grid md:flex-1">
         <div className="text-center md:justify-self-start md:text-left mt-sm md:mt-md">
           <header className="hidden md:block">
             <div className="grid grid-cols-2">
               <p className="justify-self-start text-primary">Featured</p>
-              <p className="justify-self-end lg:hidden">Nov. 11</p>
+              <p className="justify-self-end">Nov. 11</p>
             </div>
           </header>
           <h1 className="text-2xl font-semibold leading-7 md:font-bold mt-sm md:leading-10 md:underline md:text-4xl">{title}</h1>
           <button className="lg:mt-[45px] md:mt-lg lg:text-lg md:py-[11px] md:px-[45px] md:text-base text-sm font-semibold text-gray-200 rounded-[3px] py-sm mt-md bg-primary px-lg">Read More</button>
         </div>
       </div>
-      <div className="md:mt-0">
+      <div className="md:mt-0 md:flex-1">
         <div className="grid grid-cols-2 mx-xs mb-sm md:hidden">
           <p className="justify-self-start text-primary">Featured</p>
           <p className="justify-self-end lg:hidden">Nov. 11</p>
