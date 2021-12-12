@@ -91,5 +91,9 @@ h3 {
 .content h2,
 .content h3,
 .content h4 {
-  @apply mt-4;
+  @apply mt-4 mb-[-14px];
+}
+
+.content p {
+  @apply mt-md;
 }
