@@ -21,11 +21,12 @@ const FeaturedArticle = () => {
               <p className="justify-self-end lg:hidden">Nov. 11</p>
             </div>
           </header>
-          <h1 className="text-2xl font-bold leading-7 mt-sm md:leading-10 md:underline md:text-4xl">{title}</h1>
+          <h1 className="text-2xl font-semibold leading-7 md:font-bold mt-sm md:leading-10 md:underline md:text-4xl">{title}</h1>
+          <button className="lg:mt-[45px] md:mt-lg lg:text-lg md:py-[11px] md:px-[45px] md:text-base text-sm font-semibold text-gray-200 rounded-[3px] py-sm mt-md bg-primary px-lg">Read More</button>
         </div>
       </div>
       <div className="md:mt-0">
-        <div className="grid grid-cols-2 mb-xs md:hidden">
+        <div className="grid grid-cols-2 mx-xs mb-sm md:hidden">
           <p className="justify-self-start text-primary">Featured</p>
           <p className="justify-self-end lg:hidden">Nov. 11</p>
         </div>
