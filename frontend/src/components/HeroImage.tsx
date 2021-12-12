@@ -9,7 +9,7 @@ const HeroImage = () => {
   if (error) return null
   if (isLoading) return null
 
-  const { image } = data.heroImage
+  const { image, title, subtitle } = data.heroImage
 
   return (
     <div className="relative">
@@ -17,8 +17,8 @@ const HeroImage = () => {
       <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
         <div className="absolute w-full h-full hero-image-overlay"></div>
         <header className="z-10 text-center text-white md:text-gray-200">
-          <h1 className="text-3xl md:font-bold md:text-4xl">Personal Blog</h1>
-          <h2 className="text-xl font-semibold md:text-2xl">Features, News, Stories and more</h2>
+          {title && <h1 className="text-3xl md:font-bold md:text-4xl">{title}</h1>}
+          {subtitle && <h2 className="text-xl font-semibold md:text-2xl">{subtitle}</h2>}
         </header>
       </div>
     </div>
@@ -29,6 +29,8 @@ const HEROIMAGE = gql`
   query GetHeroImage {
     heroImage {
       id
+      title
+      subtitle
       image {
         url
       }
