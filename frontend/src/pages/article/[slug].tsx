@@ -11,10 +11,10 @@ const Article = () => {
   const { query } = useRouter()
   const { slug } = query
 
-  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { slug: slug }));
+  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { slug: slug }), { enabled: slug ? true : false });
 
   if (error) return <p>Could not load the article. Please try again later</p>
-  if (isLoading) return null
+  if (isLoading || !data) return null
 
   const { title, subtitle, content, image } = data.articles[0]
 
