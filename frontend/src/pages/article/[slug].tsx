@@ -27,7 +27,7 @@ const Article = () => {
         <div className="relative h-40 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
           <img src={`http://localhost:1337${image.url}`} alt="cover image" className="absolute top-0 z-10 heroImage" />
           <div className="relative z-20 grid h-full global-padding py-lg overlay">
-            <div className="self-end md:w-2/3 md:mx-auto">
+            <div className="self-end md:w-3/5 md:mx-auto">
               <h1 className="text-4xl font-semibold leading-8 text-gray-200">{title}</h1>
               {subtitle && <h2 className="font-medium text-gray-300 mt-xs">{subtitle}</h2>}
             </div>
@@ -35,7 +35,12 @@ const Article = () => {
         </div>
       )}
 
-      <div className="md:w-2/3 md:mx-auto">
+
+      <div className="md:w-3/5 md:mx-auto">
+        <div className="mb-4 mt-md">
+          <p className="font-semibold text-gray-900">Omar Dini</p>
+          <p className="text-sm">Nov. 11</p>
+        </div>
         <article className="content">
           <Markdown>{content}</Markdown>
         </article>
