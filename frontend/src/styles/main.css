@@ -28,6 +28,11 @@
   @apply grid gap-y-lg md:gap-y-xl gap-x-lg md:grid-cols-2 lg:grid-cols-3;
 }
 
+.hero-image-overlay {
+  background: #100a42;
+  opacity: 0.25;
+}
+
 .overlay {
   background: linear-gradient(
     to bottom,
