@@ -93,7 +93,3 @@ h3 {
 .content h4 {
   @apply mt-4;
 }
-
-.content p {
-  @apply mt-2;
-}
