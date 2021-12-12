@@ -28,6 +28,10 @@
   @apply grid gap-y-lg md:gap-y-xl gap-x-lg md:grid-cols-2 lg:grid-cols-3;
 }
 
+.featured-button {
+  @apply inline-block cursor-pointer transition-all duration-300 ease-in-out delay-75 hover:bg-gray-900 hover:-translate-y-1 hover:scale-105 lg:mt-[45px] md:mt-lg lg:text-lg md:py-[11px] md:px-[45px] md:text-base text-sm font-semibold text-gray-200 rounded-[3px] py-sm mt-md bg-primary px-lg;
+}
+
 .hero-image-overlay {
   background: #100a42;
   opacity: 0.25;

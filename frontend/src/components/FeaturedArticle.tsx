@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query';
 import { gql } from 'graphql-request';
 import { client } from '../services/api';
+import Link from 'next/link';
 
 const FeaturedArticle = () => {
 
@@ -9,7 +10,7 @@ const FeaturedArticle = () => {
   if (isLoading) return null
   if (error || !data) return null
 
-  const { title, subtitle, image } = data.featuredArticle.article
+  const { title, slug, image } = data.featuredArticle.article
 
   return (
     <div className="flex flex-col-reverse md:flex-row-reverse md:gap-[45px]">
@@ -22,7 +23,9 @@ const FeaturedArticle = () => {
             </div>
           </header>
           <h1 className="text-2xl font-semibold leading-7 md:font-bold mt-sm md:leading-10 md:underline md:text-4xl">{title}</h1>
-          <button className="lg:mt-[45px] md:mt-lg lg:text-lg md:py-[11px] md:px-[45px] md:text-base text-sm font-semibold text-gray-200 rounded-[3px] py-sm mt-md bg-primary px-lg">Read More</button>
+          <Link href={`/article/${slug}`} passHref>
+            <a className="featured-button">Read More</a>
+          </Link>
         </div>
       </div>
       <div className="md:mt-0 md:flex-1">
@@ -42,6 +45,7 @@ const Article = gql`
       article {
         title
         subtitle
+        slug
         image {
           url
         }
