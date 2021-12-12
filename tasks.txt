@@ -1,12 +1,11 @@
 # fixed footer (shows when there isn't alot of content)
-# category page title
-# empty category message
-# call to action on featured post
-# footer social links
 # author + date details on the article page
 # about author page from cms
+# footer social links
 # tidy up post page in general
 # sort out linebreaks on rich content
+# category page title
+# empty category message
 # tags?
 # text-size on mobile?
 # font-family
@@ -23,6 +22,7 @@ minor:
 # brand logo should be a link to home
 
 done (listed):
+# call to action on featured post
 # typography
 # home design
 # post design
