@@ -26,11 +26,14 @@ const Article = () => {
       {image?.url && (
         <div className="relative h-40 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
           <img src={`http://localhost:1337${image.url}`} alt="cover image" className="absolute top-0 z-10 heroImage" />
-          <div className="relative z-20 grid h-full global-padding py-lg overlay">
-            <div className="self-end md:w-3/5 md:mx-auto">
-              <h1 className="text-4xl font-semibold leading-8 text-gray-200">{title}</h1>
-              {subtitle && <h2 className="font-medium text-gray-300 mt-xs">{subtitle}</h2>}
-            </div>
+
+
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+            <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
+            <header className="z-10 text-center text-white md:text-gray-200">
+              <h1 className="text-3xl md:font-semibold md:text-4xl">{title}</h1>
+              {subtitle && <h2 className="text-xl font-normal md:text-2xl">{subtitle}</h2>}
+            </header>
           </div>
         </div>
       )}
@@ -39,7 +42,7 @@ const Article = () => {
       <div className="md:w-3/5 md:mx-auto">
         <div className="mb-4 mt-md">
           <p className="font-semibold text-gray-900">Omar Dini</p>
-          <p className="text-sm">Nov. 11</p>
+          <p className="text-sm">Nov. 11, 2021</p>
         </div>
         <article className="content">
           <Markdown>{content}</Markdown>
