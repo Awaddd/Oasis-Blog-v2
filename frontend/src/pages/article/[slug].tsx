@@ -1,7 +1,7 @@
 import { Meta } from '../../layout/Meta';
 import { Main } from '../../templates/Main';
 import Markdown from 'react-markdown';
-import { getArticle } from '../../services/articles';
+import { getArticle, getArticles } from '../../services/articles';
 import { SSGParams } from '../../utils/types/global';
 
 const Article = ({ article }: { article: any }) => {
@@ -53,6 +53,16 @@ export async function getStaticProps({ params }: SSGParams) {
     props: {
       article: data?.articles[0]
     }
+  }
+}
+
+export async function getStaticPaths() {
+  const data = await getArticles();
+  const articles = data.articles;
+
+  return {
+    paths: articles?.map((article: any) => `/article/${article.slug}`) || [],
+    fallback: true,
   }
 }
 
