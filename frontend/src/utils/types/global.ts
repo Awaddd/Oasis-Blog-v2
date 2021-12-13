@@ -7,3 +7,9 @@ export type Article = {
     url: string;
   };
 };
+
+export type SSGParams = {
+  params: {
+    slug: string;
+  };
+};

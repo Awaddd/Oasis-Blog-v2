@@ -18,3 +18,17 @@ export const ARTICLE = gql`
     }
   }
 `;
+
+export const ARTICLES = gql`
+  query GetArticles {
+    articles {
+      id
+      title
+      subtitle
+      slug
+      image {
+        url
+      }
+    }
+  }
+`;

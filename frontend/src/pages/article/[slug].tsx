@@ -2,6 +2,7 @@ import { Meta } from '../../layout/Meta';
 import { Main } from '../../templates/Main';
 import Markdown from 'react-markdown';
 import { getArticle } from '../../services/articles';
+import { SSGParams } from '../../utils/types/global';
 
 const Article = ({ article }: { article: any }) => {
 
@@ -45,13 +46,7 @@ const Article = ({ article }: { article: any }) => {
   );
 };
 
-type Params = {
-  params: {
-    slug: string
-  }
-}
-
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: SSGParams) {
   const data = await getArticle(params.slug);
 
   return {
