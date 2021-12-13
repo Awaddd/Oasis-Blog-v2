@@ -1,22 +1,11 @@
 import { Meta } from '../../layout/Meta';
 import { Main } from '../../templates/Main';
-import { useRouter } from 'next/router';
-import { useQuery } from 'react-query';
-import { gql } from 'graphql-request'
-import { client } from '../../services/api';
 import Markdown from 'react-markdown';
+import { getArticle } from '../../services/articles';
 
-const Article = () => {
+const Article = ({ article }: { article: any }) => {
 
-  const { query } = useRouter()
-  const { slug } = query
-
-  const { isLoading, error, data } = useQuery('article', async () => await client.request(ARTICLE, { slug: slug }), { enabled: slug ? true : false });
-
-  if (error) return <p>Could not load the article. Please try again later</p>
-  if (isLoading || !data) return null
-
-  const { title, subtitle, content, image } = data.articles[0]
+  const { title, subtitle, content, image } = article
 
   const META = <Meta title={title} description={subtitle} images={[{
     url: image.url,
@@ -56,24 +45,20 @@ const Article = () => {
   );
 };
 
+type Params = {
+  params: {
+    slug: string
+  }
+}
 
-const ARTICLE = gql`
-  query GetArticleBySlug($slug: String!) {
-    articles(where: { slug: $slug }) {
-      title
-      id
-      title
-      subtitle
-      image {
-        url
-        width
-        height
-        alternativeText
-        mime
-      }
-      content
+export async function getStaticProps({ params }: Params) {
+  const data = await getArticle(params.slug);
+
+  return {
+    props: {
+      article: data?.articles[0]
     }
   }
-`
+}
 
 export default Article;
