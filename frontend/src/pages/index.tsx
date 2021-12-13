@@ -17,7 +17,7 @@ const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle
   return (
     <Main meta={META}>
       <section className="reverse-global-padding reverse-top-global-page-padding">
-        <HeroImage hero={hero} />
+        <HeroImage data={hero} />
       </section>
 
       <section className="md:mt-xl mt-lg">
@@ -25,7 +25,7 @@ const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle
       </section>
 
       <section className="lg:mt-xl mt-lg articles">
-        <Articles articles={articles} />
+        <Articles data={articles} />
       </section>
     </Main>
   );

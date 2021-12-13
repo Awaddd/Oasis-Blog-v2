@@ -1,6 +1,6 @@
-const HeroImage = ({ hero }: { hero: any }) => {
+const HeroImage = ({ data }: { data: any }) => {
 
-  const { image, title, subtitle } = hero
+  const { image, title, subtitle } = data
 
   return (
     <div className="relative">
