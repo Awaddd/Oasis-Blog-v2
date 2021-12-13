@@ -18,7 +18,13 @@ const Article = () => {
 
   const { title, subtitle, content, image } = data.articles[0]
 
-  const META = <Meta title={title} description={subtitle} />
+  const META = <Meta title={title} description={subtitle} images={[{
+    url: image.url,
+    alt: image.alternativeText,
+    width: image.width,
+    height: image.height,
+    type: image.mime,
+  }]} />
 
   return (
     <Main meta={META}>
@@ -26,8 +32,6 @@ const Article = () => {
       {image?.url && (
         <div className="relative h-40 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
           <img src={`http://localhost:1337${image.url}`} alt="cover image" className="absolute top-0 z-10 heroImage" />
-
-
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
             <header className="z-10 text-center text-white md:text-gray-200 px-md py-sm md:py-0 md:px-0">
@@ -38,7 +42,6 @@ const Article = () => {
         </div>
       )}
 
-
       <div className="md:w-3/5 md:mx-auto">
         <div className="mb-4 mt-md">
           <p className="font-semibold text-gray-900">Omar Dini</p>
@@ -48,6 +51,7 @@ const Article = () => {
           <Markdown>{content}</Markdown>
         </article>
       </div>
+
     </Main>
   );
 };
@@ -60,10 +64,14 @@ const ARTICLE = gql`
       id
       title
       subtitle
-      content
       image {
         url
+        width
+        height
+        alternativeText
+        mime
       }
+      content
     }
   }
 `

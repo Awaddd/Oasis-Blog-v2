@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import { OpenGraphMedia } from 'next-seo/lib/types';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -8,9 +9,10 @@ type IMetaProps = {
   title?: string;
   description?: string;
   canonical?: string;
+  images?: [OpenGraphMedia]
 };
 
-const Meta = ( { title = AppConfig.title, description = AppConfig.description, canonical } : IMetaProps) => {
+const Meta = ({ title = AppConfig.title, description = AppConfig.description, canonical, images }: IMetaProps) => {
   const router = useRouter();
 
   return (
@@ -57,6 +59,7 @@ const Meta = ( { title = AppConfig.title, description = AppConfig.description, c
           url: canonical,
           locale: AppConfig.locale,
           site_name: AppConfig.site_name,
+          images: (images) || []
         }}
       />
     </>
