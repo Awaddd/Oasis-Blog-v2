@@ -6,6 +6,8 @@ import { CategoryParams } from '../utils/types/global';
 import { getArticlesByCategory } from '../services/articles';
 import { getCategories } from '../services/global';
 import { capitaliseFirstLetter } from '../utils/helpers';
+import EmptySVG from '../../public/assets/images/empty.svg';
+import Image from 'next/image';
 
 const Index = ({ category, articles }: { category: string, articles: any }) => {
 
@@ -15,6 +17,18 @@ const Index = ({ category, articles }: { category: string, articles: any }) => {
       description="Omar Dini's personal blog"
     />
   );
+
+  if (articles.length === 0) return (
+    <Main meta={META}>
+      <section className="grid items-center h-full text-center mt-lg">
+        <h1>{capitaliseFirstLetter(category)}</h1>
+        <p className="text-lg font-normal mt-md">Sorry there are no posts at the moment. Please check back later!</p>
+        <div className="mt-xl">
+          <Image src={EmptySVG.src} alt="Empty category" height="278" width="333" />
+        </div>
+      </section>
+    </Main>
+  )
 
   return (
     <Main meta={META}>
