@@ -1,32 +1,17 @@
-import { useRouter } from 'next/router';
-import { useQuery } from 'react-query';
-import { gql } from 'graphql-request'
-import { client } from '../services/api';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 import { Article } from '../utils/types/global';
 import ArticleCardWithLink from '../components/ArticleCardWithLink';
+import { CategoryParams } from '../utils/types/global';
+import { getArticlesByCategory } from '../services/articles';
+import { getCategories } from '../services/global';
+import { capitaliseFirstLetter } from '../utils/helpers';
 
-const Index = () => {
-
-  const { query } = useRouter()
-  const { category } = query
-
-  const queryKey = `get${category}`
-
-  const { isLoading, error, data } = useQuery(queryKey, async () => await client.request(ARTICLES, { category }), { enabled: category ? true : false });
-
-  if (error) return (
-    <p>Error...</p>
-  )
-
-  if (!data) return null
-
-  const { articles } = data.categories[0];
+const Index = ({ category, articles }: { category: string, articles: any }) => {
 
   const META = (
     <Meta
-      title="Omar Dini"
+      title={`Omar Dini | ${category && capitaliseFirstLetter(category)}`}
       description="Omar Dini's personal blog"
     />
   );
@@ -34,39 +19,33 @@ const Index = () => {
   return (
     <Main meta={META}>
       <section className="articles">
-        {isLoading ? (
-          <p>Loading...</p>
-        ) : (
-          <>
-            {articles.map((data: Article, key: number) => (
-              <ArticleCardWithLink data={data} key={key} />
-            ))}
-          </>
-        )}
+        {articles.map((data: Article, key: number) => (
+          <ArticleCardWithLink data={data} key={key} />
+        ))}
       </section>
     </Main>
   );
 };
 
-const ARTICLES = gql`
-  query GetArticlesByCategory($category: String!) {
-    categories(where: {pluralName: $category}) {
-      id
-      name
-      pluralName
-      articles {
-        id
-        title
-        subtitle
-        slug
-        image {
-          url
-        }
-      }
+export async function getStaticProps({ params }: CategoryParams) {
+  const data = await getArticlesByCategory(capitaliseFirstLetter(params.category));
+
+  return {
+    props: {
+      category: params.category || '',
+      articles: (data?.categories[0].articles) || [],
     }
   }
-`
+}
 
+export async function getStaticPaths() {
+  const data = await getCategories();
+  const categories = data.categories;
 
+  return {
+    paths: categories?.map((category: any) => `/${category.pluralName.toLowerCase()}`) || [],
+    fallback: true,
+  }
+}
 
 export default Index;

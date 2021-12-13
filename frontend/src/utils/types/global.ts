@@ -13,3 +13,9 @@ export type SSGParams = {
     slug: string;
   };
 };
+
+export type CategoryParams = {
+  params: {
+    category: string;
+  };
+};

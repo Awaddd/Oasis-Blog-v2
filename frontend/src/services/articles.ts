@@ -1,5 +1,10 @@
 import { client } from "../services/api";
-import { ARTICLE, ARTICLES, FEATURED_ARTICLE } from "./queries";
+import {
+  ARTICLE,
+  ARTICLES,
+  ARTICLES_BY_CATEGORY,
+  FEATURED_ARTICLE,
+} from "./queries";
 
 export async function getArticle(slug: string) {
   const data = (await client.request(ARTICLE, { slug: slug })) || [];
@@ -13,5 +18,10 @@ export async function getArticles() {
 
 export async function getFeaturedArticle() {
   const data = (await client.request(FEATURED_ARTICLE)) || [];
+  return data;
+}
+
+export async function getArticlesByCategory(category: string) {
+  const data = (await client.request(ARTICLES_BY_CATEGORY, { category })) || [];
   return data;
 }

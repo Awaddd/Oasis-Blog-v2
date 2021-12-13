@@ -39,8 +39,8 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
               </Link>
 
               {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
-                <Link href={`/${pluralName}`} key={key}>
-                  <a className={`${category === pluralName && 'text-pink-500'}`}>{pluralName}</a>
+                <Link href={`/${pluralName.toLowerCase()}`} key={key}>
+                  <a className={`${category === pluralName.toLowerCase() && 'text-pink-500'}`}>{pluralName}</a>
                 </Link>
               ))}
             </div>
@@ -52,8 +52,8 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
             </Link>
 
             {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
-              <Link href={`/${pluralName}`} key={key}>
-                <a className={`${category === pluralName && 'text-primary'}`}>{pluralName}</a>
+              <Link href={`/${pluralName.toLowerCase()}`} key={key}>
+                <a className={`${category === pluralName.toLowerCase() && 'text-primary'}`}>{pluralName}</a>
               </Link>
             ))}
           </div>

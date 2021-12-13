@@ -60,3 +60,32 @@ export const FEATURED_ARTICLE = gql`
     }
   }
 `;
+
+export const ARTICLES_BY_CATEGORY = gql`
+  query GetArticlesByCategory($category: String!) {
+    categories(where: { pluralName: $category }) {
+      id
+      name
+      pluralName
+      articles {
+        id
+        title
+        subtitle
+        slug
+        image {
+          url
+        }
+      }
+    }
+  }
+`;
+
+export const CATEGORIES = gql`
+  query GetCategories {
+    categories {
+      name
+      pluralName
+      id
+    }
+  }
+`;
