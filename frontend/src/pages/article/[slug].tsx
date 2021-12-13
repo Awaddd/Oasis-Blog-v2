@@ -8,7 +8,7 @@ const Article = ({ article }: { article: any }) => {
 
   const { title, subtitle, content, image } = article
 
-  const META = <Meta title={title} description={subtitle} images={[{
+  const META = <Meta title={`Omar Dini | ${title}`} description={subtitle} images={[{
     url: image.url,
     alt: image.alternativeText,
     width: image.width,
