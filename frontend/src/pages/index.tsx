@@ -1,6 +1,6 @@
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
-import { getArticles } from '../services/articles';
+import { getArticles, getFeaturedArticle } from '../services/articles';
 import { getHero } from '../services/global';
 import HeroImage from '../components/HeroImage';
 import FeaturedArticle from '../components/FeaturedArticle';
@@ -13,7 +13,7 @@ const META = (
   />
 );
 
-const Index = ({ articles, hero }: { articles: any, hero: any }) => {
+const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle: any, articles: any }) => {
   return (
     <Main meta={META}>
       <section className="reverse-global-padding reverse-top-global-page-padding">
@@ -21,7 +21,7 @@ const Index = ({ articles, hero }: { articles: any, hero: any }) => {
       </section>
 
       <section className="md:mt-xl mt-lg">
-        <FeaturedArticle />
+        <FeaturedArticle data={featuredArticle} />
       </section>
 
       <section className="lg:mt-xl mt-lg articles">
@@ -34,11 +34,13 @@ const Index = ({ articles, hero }: { articles: any, hero: any }) => {
 export async function getStaticProps({ }) {
   const data = await getArticles();
   const heroData = await getHero();
+  const featuredArticleData = await getFeaturedArticle();
 
   return {
     props: {
       articles: data?.articles,
-      hero: heroData?.heroImage
+      hero: heroData?.heroImage,
+      featuredArticle: featuredArticleData?.featuredArticle?.article
     }
   }
 }

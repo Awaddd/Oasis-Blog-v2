@@ -45,3 +45,18 @@ export const HERO = gql`
     }
   }
 `;
+
+export const FEATURED_ARTICLE = gql`
+  query GetFeaturedArticleID {
+    featuredArticle {
+      article {
+        title
+        subtitle
+        slug
+        image {
+          url
+        }
+      }
+    }
+  }
+`;

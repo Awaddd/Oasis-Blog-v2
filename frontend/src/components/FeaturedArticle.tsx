@@ -1,16 +1,8 @@
-import { useQuery } from 'react-query';
-import { gql } from 'graphql-request';
-import { client } from '../services/api';
 import Link from 'next/link';
 
-const FeaturedArticle = () => {
+const FeaturedArticle = ({ data }: { data: any }) => {
 
-  const { isLoading, error, data } = useQuery('FeaturedArticle', async () => await client.request(Article))
-
-  if (isLoading) return null
-  if (error || !data) return null
-
-  const { title, slug, image } = data.featuredArticle.article
+  const { title, slug, image } = data
 
   return (
     <div className="flex flex-col-reverse md:flex-row-reverse md:gap-[45px]">
@@ -38,20 +30,5 @@ const FeaturedArticle = () => {
     </div>
   )
 }
-
-const Article = gql`
-  query GetFeaturedArticleID {
-    featuredArticle {
-      article {
-        title
-        subtitle
-        slug
-        image {
-          url
-        }
-      }
-    }
-  }
-`
 
 export default FeaturedArticle;
