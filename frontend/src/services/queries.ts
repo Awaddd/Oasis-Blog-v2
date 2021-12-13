@@ -32,3 +32,16 @@ export const ARTICLES = gql`
     }
   }
 `;
+
+export const HERO = gql`
+  query GetHeroImage {
+    heroImage {
+      id
+      title
+      subtitle
+      image {
+        url
+      }
+    }
+  }
+`;

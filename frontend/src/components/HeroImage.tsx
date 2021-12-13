@@ -1,15 +1,6 @@
-import { useQuery } from "react-query";
-import { gql } from 'graphql-request';
-import { client } from '../services/api';
+const HeroImage = ({ hero }: { hero: any }) => {
 
-const HeroImage = () => {
-
-  const { isLoading, error, data } = useQuery('heroImage', async () => await client.request(HEROIMAGE));
-
-  if (error) return null
-  if (isLoading) return null
-
-  const { image, title, subtitle } = data.heroImage
+  const { image, title, subtitle } = hero
 
   return (
     <div className="relative">
@@ -25,17 +16,6 @@ const HeroImage = () => {
   )
 };
 
-const HEROIMAGE = gql`
-  query GetHeroImage {
-    heroImage {
-      id
-      title
-      subtitle
-      image {
-        url
-      }
-    }
-  }
-`
+
 
 export default HeroImage;
