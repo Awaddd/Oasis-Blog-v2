@@ -1,22 +1,19 @@
-# fixed footer (shows when there isn't alot of content)
 # author + date details on the article page
 # about author page from cms
 # footer social links
-# tidy up post page in general
-# sort out linebreaks on rich content
-# category page title
-# empty category message
 # tags?
-# text-size on mobile?
 # font-family
 Avenir Next W10 Bold for titles
 & for content use: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 # clean up
 
 later:
-# server side render articles
+# refine SSG/SSR
 # comments
 # contact
+# fixed footer (shows when there isn't alot of content)
+# category page title
+
 
 minor:
 # brand logo should be a link to home
@@ -33,3 +30,10 @@ done (listed):
 # featured post design on mobile
 # specifically improve design of post page for an image-less article 
 - should read like a review/journal (images are now required on all articles)
+# server side render articles
+# text-size on mobile?
+# empty category message
+# tidy up post page in general
+# sort out linebreaks on rich content
+
+
