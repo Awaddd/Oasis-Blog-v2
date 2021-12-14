@@ -1,5 +1,5 @@
 const Newsletter = () => (
-  <div className="bg-[#304ffe] rounded-md px-lg py-lg md:px-xl md:py-[45px]">
+  <div className="bg-[#304ffe] rounded-md px-lg py-lg lg:px-xl md:px-[45px] lg:py-[45px]">
     <main className="flex flex-col justify-between gap-10 md:flex-row lg:gap-16">
       <article className="">
         <h2 className="text-3xl font-bold leading-9 text-gray-200">Newsletter</h2>

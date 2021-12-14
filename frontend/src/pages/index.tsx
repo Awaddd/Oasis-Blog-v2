@@ -28,17 +28,17 @@ const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle
           <FeaturedArticle data={featuredArticle} />
         </section>
 
-        <section className="2xl:mt-xl lg:mt-[45px] mt-lg articles">
+        <section className="2xl:mt-xl mt-[45px] articles">
           {articles.map((data: Article, key: number) => (
             <ArticleCardWithLink data={data} key={key} />
           ))}
         </section>
 
-        <section className="2xl:mt-xl lg:mt-[45px] mt-lg">
+        <section className="2xl:mt-xl md:mt-[45px] mt-lg">
           <Newsletter />
         </section>
 
-        <section className="2xl:mt-xl lg:mt-[45px] mt-lg reverse-global-padding">
+        <section className="2xl:mt-xl md:mt-[45px] mt-lg reverse-global-padding">
           <AboutMe />
         </section>
       </div>
