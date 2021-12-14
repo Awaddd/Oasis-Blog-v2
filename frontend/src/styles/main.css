@@ -84,7 +84,7 @@ h3 {
 }
 
 .heroImage {
-  @apply object-cover w-full h-40 sm:h-60 lg:h-80;
+  @apply object-cover w-full h-52 sm:h-60 lg:h-80;
 }
 
 .content h1,
