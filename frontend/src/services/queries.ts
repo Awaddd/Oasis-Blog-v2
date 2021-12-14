@@ -21,7 +21,7 @@ export const ARTICLE = gql`
 
 export const ARTICLES = gql`
   query GetArticles {
-    articles {
+    articles(limit: 3) {
       id
       title
       subtitle
