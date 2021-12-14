@@ -12,7 +12,7 @@ const ArticleCard = ({ data }: { data: Article }) => {
           </div>
         )}
         <div className="mt-2.5 mx-2.5">
-          <h2 className="text-xl font-semibold leading-7">{title}</h2>
+          <h2 className="text-xl font-bold leading-7 text-gray-800">{title}</h2>
           {subtitle && <p className="font-medium md:mt-xs">{subtitle}</p>}
         </div>
       </article>
