@@ -14,7 +14,7 @@ const FeaturedArticle = ({ data }: { data: any }) => {
               <p className="justify-self-end">Nov. 11</p>
             </div>
           </header>
-          <h1 className="text-2xl font-semibold leading-7 md:font-bold mt-sm md:leading-10 md:underline md:text-4xl">{title}</h1>
+          <h1 className="text-2xl font-semibold leading-7 md:font-bold mt-sm lg:mt-md md:leading-10 md:underline md:text-4xl 2xl:w-9/12">{title}</h1>
           <Link href={`/article/${slug}`} passHref>
             <a className="featured-button">Read More</a>
           </Link>

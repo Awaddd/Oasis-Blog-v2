@@ -4,7 +4,8 @@ import { getArticles, getFeaturedArticle } from '../services/articles';
 import { getHero } from '../services/global';
 import HeroImage from '../components/HeroImage';
 import FeaturedArticle from '../components/FeaturedArticle';
-import Articles from '../components/Articles';
+import ArticleCardWithLink from '../components/ArticleCardWithLink';
+import { Article } from '../utils/types/global';
 
 const META = (
   <Meta
@@ -16,17 +17,21 @@ const META = (
 const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle: any, articles: any }) => {
   return (
     <Main meta={META}>
-      <section className="reverse-global-padding reverse-top-global-page-padding">
+      <header className="reverse-global-padding reverse-top-global-page-padding">
         <HeroImage data={hero} />
-      </section>
+      </header>
 
-      <section className="md:mt-xl mt-lg">
-        <FeaturedArticle data={featuredArticle} />
-      </section>
+      <div className="2xl:w-9/12 2xl:mx-auto">
+        <section className="2xl:mt-xl md:mt-[45px] mt-lg">
+          <FeaturedArticle data={featuredArticle} />
+        </section>
 
-      <section className="lg:mt-xl mt-lg articles">
-        <Articles data={articles} />
-      </section>
+        <section className="2xl:mt-xl lg:mt-[45px] mt-lg articles">
+          {articles.map((data: Article, key: number) => (
+            <ArticleCardWithLink data={data} key={key} />
+          ))}
+        </section>
+      </div>
     </Main>
   );
 };
