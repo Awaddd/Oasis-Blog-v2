@@ -7,6 +7,7 @@ import FeaturedArticle from '../components/FeaturedArticle';
 import ArticleCardWithLink from '../components/ArticleCardWithLink';
 import { Article } from '../utils/types/global';
 import AboutMe from '../components/AboutMe';
+import Newsletter from '../components/Newsletter';
 
 const META = (
   <Meta
@@ -31,6 +32,10 @@ const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle
           {articles.map((data: Article, key: number) => (
             <ArticleCardWithLink data={data} key={key} />
           ))}
+        </section>
+
+        <section className="2xl:mt-xl lg:mt-[45px] mt-lg">
+          <Newsletter />
         </section>
 
         <section className="2xl:mt-xl lg:mt-[45px] mt-lg reverse-global-padding">
