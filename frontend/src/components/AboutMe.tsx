@@ -38,7 +38,7 @@ const AboutMe = () => (
         </article>
 
         <div className="mt-8 lg:mt-0 lg:w-1/2">
-          <div className="flex items-center justify-end h-64 bg-red-300">
+          <div className="flex items-center justify-end h-64 bg-gray-800 rounded-md">
           </div>
         </div>
       </div>
