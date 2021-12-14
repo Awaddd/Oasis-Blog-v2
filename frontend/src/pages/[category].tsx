@@ -20,7 +20,7 @@ const Index = ({ category, articles }: { category: string, articles: any }) => {
 
   if (articles.length === 0) return (
     <Main meta={META}>
-      <section className="grid items-center h-full text-center mt-lg">
+      <section className="grid items-center h-full text-center mt-lg mb-lg">
         <h1>{capitaliseFirstLetter(category)}</h1>
         <p className="text-lg font-normal mt-md">Sorry there are no posts at the moment. Please check back later!</p>
         <div className="mt-xl">
@@ -32,10 +32,13 @@ const Index = ({ category, articles }: { category: string, articles: any }) => {
 
   return (
     <Main meta={META}>
-      <section className="articles">
-        {articles.map((data: Article, key: number) => (
-          <ArticleCardWithLink data={data} key={key} />
-        ))}
+      <section className="mt-lg mb-lg">
+        <h1 className="text-center">{capitaliseFirstLetter(category)}</h1>
+        <main className="articles 2xl:mt-xl lg:mt-[45px] mt-lg">
+          {articles.map((data: Article, key: number) => (
+            <ArticleCardWithLink data={data} key={key} />
+          ))}
+        </main>
       </section>
     </Main>
   );
