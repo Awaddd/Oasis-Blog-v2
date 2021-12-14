@@ -3,6 +3,7 @@ import { Main } from '../../templates/Main';
 import Markdown from 'react-markdown';
 import { getArticle, getArticles } from '../../services/articles';
 import { SSGParams } from '../../utils/types/global';
+import AboutMe from '../../components/AboutMe';
 
 const Article = ({ article }: { article: any }) => {
 
@@ -42,6 +43,9 @@ const Article = ({ article }: { article: any }) => {
         </article>
       </div>
 
+      <section className="2xl:mt-xl md:mt-[45px] mt-lg reverse-global-padding">
+        <AboutMe />
+      </section>
     </Main>
   );
 };
