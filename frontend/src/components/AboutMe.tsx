@@ -1,6 +1,6 @@
 
 const AboutMe = () => (
-  <main className="bg-gray-900 dark:bg-gray-800 global-padding py-lg md:py-xl">
+  <main className="bg-gray-900 global-padding py-lg md:py-xl">
     <div className="container mx-auto">
       <div className="items-center lg:flex">
         <article className="lg:w-1/2">
