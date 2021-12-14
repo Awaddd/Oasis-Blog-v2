@@ -21,7 +21,7 @@ const Article = ({ article }: { article: any }) => {
     <Main meta={META}>
 
       {image?.url && (
-        <div className="relative h-40 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
+        <div className="relative h-52 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
           <img src={`http://localhost:1337${image.url}`} alt="cover image" className="absolute top-0 z-10 heroImage" />
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
