@@ -1,13 +1,13 @@
 
 const AboutMe = () => (
-  <section className="bg-gray-900 dark:bg-gray-800 global-padding py-xl">
+  <main className="bg-gray-900 dark:bg-gray-800 global-padding py-lg md:py-xl">
     <div className="container mx-auto">
       <div className="items-center lg:flex">
-        <div className="lg:w-1/2">
-          <h2 className="text-3xl font-bold text-gray-100">Who I am</h2>
+        <article className="lg:w-1/2">
+          <h2 className="text-3xl font-bold text-gray-100">Omar Dini</h2>
 
-          <p className="mt-4 text-gray-400 lg:max-w-md">
-            Hi I am jane , software engineer <a className="font-bold text-blue-600 dark:text-blue-400" href="#">@BakaTeam</a> , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum in sed non alias, fugiat, commodi nemo ut fugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
+          <p className="text-gray-400 lg:max-w-md">
+            Journalist and author, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum in sed non alias, fugiat, commodi nemo ut fugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
           </p>
 
           <div className="flex items-center mt-6 -mx-2">
@@ -35,18 +35,15 @@ const AboutMe = () => (
               </svg>
             </a>
           </div>
-        </div>
+        </article>
 
         <div className="mt-8 lg:mt-0 lg:w-1/2">
-          <div className="flex items-center justify-end">
-            <div className="max-w-lg">
-              <img className="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="" />
-            </div>
+          <div className="flex items-center justify-end h-64 bg-red-300">
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 );
 
 export default AboutMe;
