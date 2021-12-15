@@ -87,7 +87,7 @@ h3 {
   @apply object-cover w-full h-52 sm:h-60 lg:h-80;
 }
 
-.content h1,
+/* .content h1,
 .content h2,
 .content h3,
 .content h4 {
@@ -96,4 +96,4 @@ h3 {
 
 .content p {
   @apply mt-md;
-}
+} */

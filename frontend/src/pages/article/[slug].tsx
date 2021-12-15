@@ -38,7 +38,7 @@ const Article = ({ article }: { article: any }) => {
           <p className="font-semibold text-gray-900">Omar Dini</p>
           <p className="text-sm">Nov. 11, 2021</p>
         </div>
-        <article className="content">
+        <article className="prose-sm prose mt-md md:mt-lg sm:prose prose-blue">
           <Markdown>{content}</Markdown>
         </article>
       </div>
