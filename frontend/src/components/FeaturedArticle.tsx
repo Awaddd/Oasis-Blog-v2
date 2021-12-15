@@ -16,7 +16,7 @@ const FeaturedArticle = ({ data }: { data: any }) => {
           </header>
           <h1 className="text-xl font-bold leading-7 text-gray-800 md:font-bold mt-sm lg:mt-md md:leading-10 md:underline md:text-4xl 2xl:w-9/12">{title}</h1>
           <Link href={`/article/${slug}`} passHref>
-            <a className="featured-button">Read More</a>
+            <a className="shadow-sm featured-button shadow-primary/50 hover:shadow-none">Read More</a>
           </Link>
         </div>
       </div>
