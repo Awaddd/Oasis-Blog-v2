@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { Key, ReactNode, useState } from 'react';
 import Link from 'next/link';
-import { Burger } from '@mantine/core';
 import { gql } from 'graphql-request';
 import { useQuery } from 'react-query';
 import { client } from '../services/api';
@@ -27,7 +26,7 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
       </div>
 
       <div className="relative justify-self-end md:hidden burger p-md">
-        <Burger opened={open} onClick={() => setOpen(open => !open)} size="md" color={`${open ? "white" : "black"}`} />
+        {/* <span style={{ color: open ? 'white' : 'black' }} onClick={() => setOpen(open => !open)}>x</span> */}
       </div>
 
       {!isLoading && !error && data && (
