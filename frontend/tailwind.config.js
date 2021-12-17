@@ -1,7 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false,
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontSize: {
       xs: "0.75rem",
