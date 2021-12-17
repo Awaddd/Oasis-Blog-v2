@@ -1,3 +1,6 @@
+URGENT
+# format wysiwyg content
+
 # author + date details on the article page
 # about author page from cms
 # footer social links
@@ -6,6 +9,7 @@
 Avenir Next W10 Bold for titles
 & for content use: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 # clean up
+# Inter, system-ui
 
 later:
 # refine SSG/SSR
