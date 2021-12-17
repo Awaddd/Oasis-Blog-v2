@@ -21,6 +21,20 @@ export const ARTICLE = gql`
 
 export const ARTICLES = gql`
   query GetArticles {
+    articles {
+      id
+      title
+      subtitle
+      slug
+      image {
+        url
+      }
+    }
+  }
+`;
+
+export const FIRST_THREE_ARTICLES = gql`
+  query GetArticles {
     articles(limit: 3) {
       id
       title

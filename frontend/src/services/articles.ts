@@ -4,6 +4,7 @@ import {
   ARTICLES,
   ARTICLES_BY_CATEGORY,
   FEATURED_ARTICLE,
+  FIRST_THREE_ARTICLES,
 } from "./queries";
 
 export async function getArticle(slug: string) {
@@ -11,8 +12,11 @@ export async function getArticle(slug: string) {
   return data;
 }
 
-export async function getArticles() {
-  const data = (await client.request(ARTICLES)) || [];
+export async function getArticles(getFirstThree?: true) {
+  const data =
+    (getFirstThree
+      ? await client.request(FIRST_THREE_ARTICLES)
+      : await client.request(ARTICLES)) || [];
   return data;
 }
 
