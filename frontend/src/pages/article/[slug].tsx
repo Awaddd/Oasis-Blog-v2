@@ -1,6 +1,6 @@
 import { Meta } from '../../layout/Meta';
 import { Main } from '../../templates/Main';
-import Markdown from 'react-markdown';
+import parse from 'html-react-parser';
 import { getArticle, getArticles } from '../../services/articles';
 import { SSGParams } from '../../utils/types/global';
 import AboutMe from '../../components/AboutMe';
@@ -39,7 +39,7 @@ const Article = ({ article }: { article: any }) => {
           <p className="text-sm">Nov. 11, 2021</p>
         </div>
         <article className="prose-sm prose mt-md md:mt-lg sm:prose prose-blue">
-          <Markdown>{content}</Markdown>
+          {parse(content)}
         </article>
       </div>
 
