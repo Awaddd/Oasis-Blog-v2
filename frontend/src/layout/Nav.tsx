@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Key, ReactNode, useState } from 'react';
+import { Key, ReactNode } from 'react';
 import Link from 'next/link';
 import { gql } from 'graphql-request';
 import { useQuery } from 'react-query';
@@ -10,53 +10,31 @@ const Nav = ({ meta }: { meta: ReactNode }) => {
   const router = useRouter()
   const category = router.query.category
 
-  const [open, setOpen] = useState(false)
-
   const { error, isLoading, data } = useQuery('categories', async () => await client.request(CATEGORIES));
 
   if (error) return <p>Error...</p>
 
   return (
-    <nav className={`grid items-end w-full grid-flow-col-dense py-4 lg:py-7 md:py-5 antialiased nav-padding ${open && "bg-gray-900 text-gray-200 md:bg-white md:text-black"}`}>
+    <nav className={'grid items-end w-full grid-flow-col-dense py-4 lg:py-7 md:py-5 antialiased nav-padding'}>
 
       {meta}
 
-      <div className={`brand justify-self-start ${open && "col-start-1 col-end-2 justify-self-center row-start-1 row-end-3 self-center"}`}>
-        Omar Dini<span className={`${open ? "text-pink-500" : "text-primary"}`}>.</span>
-      </div>
-
-      <div className="relative justify-self-end md:hidden burger p-md">
-        {/* <span style={{ color: open ? 'white' : 'black' }} onClick={() => setOpen(open => !open)}>x</span> */}
+      <div className={"brand justify-self-start"}>
+        Omar Dini<span className="text-primary">.</span>
       </div>
 
       {!isLoading && !error && data && (
-        <>
-          {open && (
-            <div className="flex flex-col col-start-1 col-end-3 row-start-2 gap-2 py-4 text-right md:hidden mr-sm">
-              <Link href="/">
-                <a className={`${router.pathname === '/' && 'text-pink-500'}`}>Home</a>
-              </Link>
+        <div className="justify-end hidden gap-6 justify-self-end md:flex">
+          <Link href="/">
+            <a className={`${router.pathname === '/' && 'text-primary'}`}>Home</a>
+          </Link>
 
-              {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
-                <Link href={`/${pluralName.toLowerCase()}`} key={key}>
-                  <a className={`${category === pluralName.toLowerCase() && 'text-pink-500'}`}>{pluralName}</a>
-                </Link>
-              ))}
-            </div>
-          )}
-
-          <div className="justify-end hidden gap-6 justify-self-end md:flex">
-            <Link href="/">
-              <a className={`${router.pathname === '/' && 'text-primary'}`}>Home</a>
+          {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
+            <Link href={`/${pluralName.toLowerCase()}`} key={key}>
+              <a className={`${category === pluralName.toLowerCase() && 'text-primary'}`}>{pluralName}</a>
             </Link>
-
-            {data.categories.map(({ pluralName }: Category, key: Key | null | undefined) => (
-              <Link href={`/${pluralName.toLowerCase()}`} key={key}>
-                <a className={`${category === pluralName.toLowerCase() && 'text-primary'}`}>{pluralName}</a>
-              </Link>
-            ))}
-          </div>
-        </>
+          ))}
+        </div>
       )}
 
     </nav>

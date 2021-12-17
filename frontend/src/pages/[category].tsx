@@ -18,11 +18,11 @@ const Index = ({ category, articles }: { category: string, articles: any }) => {
     />
   );
 
-  if (articles.length === 0) return (
+  if (!articles || articles.length === 0) return (
     <Main meta={META}>
       <section className="grid items-center h-full text-center mt-lg mb-lg">
         <h1>{capitaliseFirstLetter(category)}</h1>
-        <p className="text-lg font-normal mt-md">Sorry there are no posts at the moment. Please check back later!</p>
+        <p className="text-lg font-normal mt-md">Sorry there are no posts at the moment. Please check back later</p>
         <div className="mt-xl">
           <Image src={EmptySVG.src} alt="Empty category" height="278" width="333" />
         </div>
