@@ -3,10 +3,10 @@ import { Main } from '../../templates/Main';
 import parse from 'html-react-parser';
 import { getArticle, getArticles } from '../../services/articles';
 import { SSGParams } from '../../utils/types/global';
-import AboutMe from '../../components/AboutMe';
 import Image from 'next/image';
 import { api } from '../../services/api';
 import { getPlaiceholder as getPlaceholder } from "plaiceholder";
+import SocialIconBar from '../../components/SocialIconBar';
 
 type Article = {
   title: string;
@@ -61,14 +61,18 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
           <p className="font-semibold text-gray-900">Omar Dini</p>
           <p className="text-sm">Nov. 11, 2021</p>
         </div>
+
         <article className="prose-sm prose mt-md md:mt-lg sm:prose">
           {parse(content)}
         </article>
-      </div>
 
-      <section className="2xl:mt-xl md:mt-[45px] mt-lg reverse-global-padding">
-        <AboutMe />
-      </section>
+        <article className="flex flex-col text-center mt-md md:mt-lg">
+          <p className="text-sm text-gray-900">Thanks for reading, make sure to check back for weekly updates!</p>
+          <div className="flex self-center md:mt-[11px]">
+            <SocialIconBar />
+          </div>
+        </article>
+      </div>
     </Main>
   );
 };
