@@ -4,9 +4,11 @@ import parse from 'html-react-parser';
 import { getArticle, getArticles } from '../../services/articles';
 import { SSGParams } from '../../utils/types/global';
 import AboutMe from '../../components/AboutMe';
+import Image from 'next/image';
 
 const Article = ({ article }: { article: any }) => {
 
+  if (!article) return <p>Sorry, could not load the article. Please try again later</p>
   const { title, subtitle, content, image } = article
 
   const META = <Meta title={`Omar Dini | ${title}`} description={subtitle} images={[{
@@ -22,7 +24,7 @@ const Article = ({ article }: { article: any }) => {
 
       {image?.url && (
         <div className="relative h-52 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
-          <img src={`http://localhost:1337${image.url}`} alt="cover image" className="absolute top-0 z-10 heroImage" />
+          <Image layout="fill" src={`http://localhost:1337${image.url}`} priority alt={title} className="absolute top-0 z-10 heroImage" />
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
             <header className="z-10 text-center text-white md:text-gray-200 px-md py-sm md:py-0 md:px-0">
@@ -38,7 +40,7 @@ const Article = ({ article }: { article: any }) => {
           <p className="font-semibold text-gray-900">Omar Dini</p>
           <p className="text-sm">Nov. 11, 2021</p>
         </div>
-        <article className="prose-sm prose mt-md md:mt-lg sm:prose prose-blue">
+        <article className="prose-sm prose mt-md md:mt-lg sm:prose">
           {parse(content)}
         </article>
       </div>
