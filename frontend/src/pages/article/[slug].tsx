@@ -8,7 +8,26 @@ import Image from 'next/image';
 import { api } from '../../services/api';
 import { getPlaiceholder as getPlaceholder } from "plaiceholder";
 
-const Article = ({ article, imageProps }: { article: any }) => {
+type Article = {
+  title: string;
+  subtitle?: string;
+  content: string;
+  image: {
+    url: string;
+    alternativeText: string;
+    width: number;
+    height: number;
+    mime: string;
+  }
+}
+
+type ImageType = {
+  src: string;
+  type: string;
+  blurDataURL: string;
+}
+
+const Article = ({ article, imageProps }: { article: Article, imageProps: ImageType }) => {
 
   if (!article) return <p>Sorry, could not load the article. Please try again later</p>
   const { title, subtitle, content, image } = article
@@ -65,7 +84,8 @@ export async function getStaticProps({ params }: SSGParams) {
     props: {
       article: data?.articles[0],
       imageProps: {
-        ...img,
+        src: img.src,
+        type: img.type,
         blurDataURL: base64,
       },
     }
