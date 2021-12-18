@@ -50,7 +50,7 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
             <header className="z-10 text-center text-white md:text-gray-200 px-md py-sm md:py-0 md:px-0">
               <h1 className="text-3xl md:font-semibold md:text-4xl">{title}</h1>
-              {subtitle && <h2 className="text-xl font-normal md:text-2xl">{subtitle}</h2>}
+              {subtitle && <h2 className="hidden text-xl font-normal md:text-2xl md:inline-block">{subtitle}</h2>}
             </header>
           </div>
         </div>
