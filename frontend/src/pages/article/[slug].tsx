@@ -41,7 +41,7 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
   }]} />
 
   return (
-    <Main meta={META} footer={<ArticleFooter />}>
+    <Main meta={META} color="bg-slate-50" classes="pb-lg" footer={<ArticleFooter />} >
 
       {image?.url && (
         <div className="relative h-52 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
