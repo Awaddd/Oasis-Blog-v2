@@ -15,6 +15,9 @@ module.exports = {
       "6xl": "4rem",
     },
     extend: {
+      fontFamily: {
+        inter: "Inter, sans-serif",
+      },
       colors: {
         primary: "#1c86ff",
         darkBlue: "#3182ce",
