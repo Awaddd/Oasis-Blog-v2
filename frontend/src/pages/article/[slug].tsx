@@ -48,9 +48,8 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
           <Image layout="fill" {...imageProps} placeholder="blur" priority alt={title} className="absolute top-0 z-10 text-center text-gray-200 bg-gray-900 heroImage" />
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
-            <header className="z-10 text-center text-white md:text-gray-200 px-md py-sm md:py-0 md:px-0">
+            <header className="z-10 text-center text-white md:w-4/5 md:text-gray-200 px-md py-sm md:py-0 md:px-0">
               <h1 className="text-3xl md:font-semibold md:text-4xl">{title}</h1>
-              {subtitle && <h2 className="hidden text-xl font-normal md:text-2xl md:inline-block">{subtitle}</h2>}
             </header>
           </div>
         </div>
