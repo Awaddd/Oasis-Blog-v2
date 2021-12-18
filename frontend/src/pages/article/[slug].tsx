@@ -58,8 +58,8 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
 
       <div className="md:w-3/5 md:mx-auto">
         <div className="mb-4 mt-md">
-          <p className="font-semibold text-gray-900">Omar Dini</p>
-          <p className="text-sm">Nov. 11, 2021</p>
+          <h4 className="font-bold text-primary">Omar Dini</h4>
+          <p className="text-sm">November 11th, 2020</p>
         </div>
 
         <article className="prose-sm prose mt-md md:mt-lg sm:prose">
