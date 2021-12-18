@@ -5,6 +5,7 @@ import { getArticle, getArticles } from '../../services/articles';
 import { SSGParams } from '../../utils/types/global';
 import AboutMe from '../../components/AboutMe';
 import Image from 'next/image';
+import { api } from '../../services/api';
 
 const Article = ({ article }: { article: any }) => {
 
@@ -24,7 +25,7 @@ const Article = ({ article }: { article: any }) => {
 
       {image?.url && (
         <div className="relative h-52 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
-          <Image layout="fill" src={`http://localhost:1337${image.url}`} priority alt={title} className="absolute top-0 z-10 heroImage" />
+          <Image layout="fill" src={`${api}${image.url}`} priority alt={title} className="absolute top-0 z-10 text-center text-gray-200 bg-gray-900 heroImage" />
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
             <header className="z-10 text-center text-white md:text-gray-200 px-md py-sm md:py-0 md:px-0">
