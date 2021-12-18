@@ -55,13 +55,18 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
         </div>
       )}
 
-      <div className="md:w-3/5 md:mx-auto">
-        <div className="mb-4 mt-md">
-          <h4 className="font-bold text-primary">Omar Dini</h4>
-          <p className="text-sm">November 11th, 2020</p>
+      <div className="md:w-3/5 md:mx-auto my-lg mb-[45px]">
+        <div className="flex mb-4 mt-md">
+          <div className="w-12 h-12">
+            <img src="https://www.byrdie.com/thmb/j922lTh-Vn8HnmQsxSKGA0ztxw0=/756x756/filters:no_upscale():max_bytes(150000):strip_icc()/Rob-cc2d68e18be04acf90a74623c1087fd6.jpg" className="object-cover w-full h-full bg-red-300 rounded-full" />
+          </div>
+          <div className="flex flex-col justify-center ml-[11px]">
+            <h4 className="font-bold text-black">Omar Dini</h4>
+            <p className="text-sm -mt-xs">November 11th, 2020</p>
+          </div>
         </div>
 
-        <article className="prose-sm prose mt-md md:mt-lg sm:prose">
+        <article className="prose-sm prose sm:prose">
           {parse(content)}
         </article>
       </div>
