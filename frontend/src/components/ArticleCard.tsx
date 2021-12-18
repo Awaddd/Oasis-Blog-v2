@@ -12,20 +12,12 @@ const ArticleCard = ({ data }: { data: Article }) => {
           </div>
         )}
         <div className="mt-2.5 mx-2.5">
-          <h2 className="text-xl font-bold leading-7 text-gray-800">{title}</h2>
-          {subtitle && <p className="font-medium md:mt-xs">{subtitle}</p>}
+          <h2 className="text-xl font-semibold leading-7 text-zinc-900">{title}</h2>
+          {subtitle && <p className="font-medium md:mt-[2px]">{subtitle}</p>}
         </div>
       </article>
     )
   }
-
-  return (
-    <article className="h-48 border-l-4 shadow cursor-pointer border-primary py-lg my-sm md:my-0" style={{ paddingLeft: "26px", paddingRight: "26px" }}>
-      <h2 className="text-2xl font-semibold leading-7">{title}</h2>
-      {subtitle && <p className="font-medium mt-xs">{subtitle}</p>}
-    </article>
-  )
-
 }
 
 export default ArticleCard
