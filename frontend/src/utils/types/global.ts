@@ -11,6 +11,7 @@ export type Article = {
 export type SSGParams = {
   params: {
     slug: string;
+    imageProps: any;
   };
 };
 
