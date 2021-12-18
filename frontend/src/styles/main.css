@@ -56,6 +56,10 @@
   @apply -mt-xs sm:-mt-sm;
 }
 
+.footer {
+  @apply self-end w-full;
+}
+
 .articles {
   @apply grid 2xl:gap-[45px] gap-y-lg md:gap-y-xl gap-x-lg md:grid-cols-2 lg:grid-cols-3;
 }

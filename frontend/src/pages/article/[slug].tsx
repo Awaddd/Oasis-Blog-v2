@@ -6,7 +6,7 @@ import { SSGParams } from '../../utils/types/global';
 import Image from 'next/image';
 import { api } from '../../services/api';
 import { getPlaiceholder as getPlaceholder } from "plaiceholder";
-import SocialIconBar from '../../components/SocialIconBar';
+import ArticleFooter from '../../components/ArticleFooter';
 
 type Article = {
   title: string;
@@ -41,7 +41,7 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
   }]} />
 
   return (
-    <Main meta={META}>
+    <Main meta={META} footer={<ArticleFooter />}>
 
       {image?.url && (
         <div className="relative h-52 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
@@ -64,13 +64,6 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
 
         <article className="prose-sm prose mt-md md:mt-lg sm:prose">
           {parse(content)}
-        </article>
-
-        <article className="flex flex-col text-center mt-md md:mt-lg">
-          <p className="text-sm text-gray-900">Thanks for reading, make sure to check back for weekly updates!</p>
-          <div className="flex self-center md:mt-[11px]">
-            <SocialIconBar />
-          </div>
         </article>
       </div>
     </Main>

@@ -1,12 +1,15 @@
 import { AppConfig } from '../utils/AppConfig';
+import { FooterProps } from '../utils/types/global';
 
-const Footer = ({ dark }: { dark?: boolean }) => {
+const Footer = ({ dark, children }: FooterProps) => {
 
   const classes = dark ? 'bg-gray-900 text-gray-200' : 'bg-white text-gray-900';
 
+  if (children) return <>{children}</>
+
   return (
-    <footer className="self-end w-full">
-      <div className={`text-center text-gray-200 py-md ${classes}`}>
+    <footer className={`footer ${classes}`}>
+      <div className="text-center text-gray-200 py-md">
         <span className="text-sm"> © Copyright {new Date().getFullYear()} {AppConfig.title}</span>
       </div>
     </footer>

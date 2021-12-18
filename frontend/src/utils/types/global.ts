@@ -1,3 +1,10 @@
+import { ReactNode } from "react";
+
+export type FooterProps = {
+  dark?: boolean;
+  children?: ReactNode;
+};
+
 export type Article = {
   id: number;
   title: string;

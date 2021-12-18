@@ -18,7 +18,7 @@ const META = (
 
 const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle: any, articles: any }) => {
   return (
-    <Main meta={META} darkFooter={true} >
+    <Main meta={META} footerProps={{ dark: true }} >
       <header className="reverse-global-padding reverse-top-global-page-padding">
         <HeroImage data={hero} />
       </header>
