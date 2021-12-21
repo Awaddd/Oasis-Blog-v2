@@ -55,9 +55,9 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
         </div>
       )}
 
-      <div className="md:w-3/5 md:mx-auto my-lg mb-[45px]">
-        <div className="flex mb-[16px] md:mb-[24px] mt-md">
-          <div className="w-12 h-12">
+      <div className="md:w-3/5 md:mx-auto my-lg mb-[45px] 2xl:w-2/4">
+        <div className="flex mb-[16px] md:mb-[24px] lg:mb-[36px] mt-md">
+          <div className="w-12 h-12 lg:w-16 lg:h-16">
             <img src="https://www.byrdie.com/thmb/j922lTh-Vn8HnmQsxSKGA0ztxw0=/756x756/filters:no_upscale():max_bytes(150000):strip_icc()/Rob-cc2d68e18be04acf90a74623c1087fd6.jpg" className="object-cover w-full h-full bg-red-300 rounded-full" />
           </div>
           <div className="flex flex-col justify-center ml-[11px]">
@@ -66,7 +66,7 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
           </div>
         </div>
 
-        <article className="prose-sm prose sm:prose">
+        <article className="!max-w-full prose-sm md:prose sm:prose lg:prose-lg xl:prose-xl">
           {parse(content)}
         </article>
       </div>

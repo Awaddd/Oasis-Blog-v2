@@ -37,11 +37,11 @@ const Index = ({ hero, featuredArticle, articles }: { hero: any, featuredArticle
         <section className="2xl:mt-xl md:mt-[45px] mt-lg">
           <Newsletter />
         </section>
-
-        <section className="2xl:mt-xl md:mt-[45px] mt-lg reverse-global-padding">
-          <AboutMe />
-        </section>
       </div>
+
+      <footer className="2xl:mt-xl md:mt-[45px] mt-lg reverse-global-padding">
+        <AboutMe />
+      </footer>
     </Main>
   );
 };
