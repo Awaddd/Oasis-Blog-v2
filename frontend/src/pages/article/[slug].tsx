@@ -44,7 +44,7 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
     <Main meta={META} color="bg-slate-50" classes="pb-lg" footer={<ArticleFooter />} >
 
       {image?.url && (
-        <div className="relative h-52 sm:h-60 lg:h-80 reverse-global-padding reverse-top-global-page-padding">
+        <div className="relative h-52 sm:h-60 lg:h-80 2xl:h-96 reverse-global-padding reverse-top-global-page-padding">
           <Image layout="fill" {...imageProps} placeholder="blur" priority alt={title} className="absolute top-0 z-10 text-center text-gray-200 bg-gray-900 heroImage" />
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <div className="absolute z-10 w-full h-full hero-image-overlay"></div>
@@ -56,17 +56,17 @@ const Article = ({ article, imageProps }: { article: Article, imageProps: ImageT
       )}
 
       <div className="md:w-3/5 md:mx-auto my-lg mb-[45px] 2xl:w-2/4">
-        <div className="flex mb-[16px] md:mb-[24px] lg:mb-[36px] mt-md">
+        <div className="flex 2xl:pb-2">
           <div className="w-12 h-12 lg:w-16 lg:h-16">
             <img src="https://www.byrdie.com/thmb/j922lTh-Vn8HnmQsxSKGA0ztxw0=/756x756/filters:no_upscale():max_bytes(150000):strip_icc()/Rob-cc2d68e18be04acf90a74623c1087fd6.jpg" className="object-cover w-full h-full bg-red-300 rounded-full" />
           </div>
           <div className="flex flex-col justify-center ml-[11px]">
-            <h4 className="font-bold text-black">Omar Dini</h4>
-            <p className="text-sm -mt-xs">November 11th, 2020</p>
+            <h4 className="font-semibold text-black 2xl:text-xl">Omar Dini</h4>
+            <p className="text-sm -mt-xs 2xl:text-lg">November 11th, 2020</p>
           </div>
         </div>
 
-        <article className="!max-w-full prose-sm md:prose sm:prose lg:prose-lg xl:prose-xl">
+        <article className="!max-w-full prose-sm md:prose sm:prose 2xl:prose-xl mt-8">
           {parse(content)}
         </article>
       </div>
