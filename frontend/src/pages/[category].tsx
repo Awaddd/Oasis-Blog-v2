@@ -32,7 +32,7 @@ const Index = ({ category, articles }: { category: string, articles: any }) => {
 
   return (
     <Main meta={META}>
-      <section className="mt-lg mb-lg md:w-9/12 md:mx-auto">
+      <section className="mt-lg mb-lg 2xl:w-9/12 md:mx-auto">
         <h1 className="text-center">{capitaliseFirstLetter(category)}</h1>
         <main className="articles 2xl:mt-xl lg:mt-[45px] mt-lg">
           {articles.map((data: Article, key: number) => (
