@@ -9,7 +9,7 @@ const Footer = ({ dark, children }: FooterProps) => {
 
   return (
     <footer className={`footer ${classes}`}>
-      <div className="text-center text-gray-200 py-md">
+      <div className="text-center py-md">
         <span className="text-sm"> © Copyright {new Date().getFullYear()} {AppConfig.title}</span>
       </div>
     </footer>

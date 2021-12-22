@@ -22,8 +22,8 @@ const Index = ({ category, articles }: { category: string, articles: any }) => {
     <Main meta={META}>
       <section className="grid items-center h-full text-center mt-lg mb-lg">
         <h1>{capitaliseFirstLetter(category)}</h1>
-        <p className="text-lg font-normal mt-md">Sorry there are no posts at the moment. Please check back later</p>
-        <div className="mt-xl">
+        <p className="text-sm font-normal lg:text-lg mt-md">Sorry there are no posts at the moment. Please check back later</p>
+        <div className="mt-lg md:mt-[45px]">
           <Image src={EmptySVG.src} alt="Empty category" height="278" width="333" />
         </div>
       </section>
