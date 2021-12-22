@@ -2,7 +2,7 @@ import { GraphQLClient } from "graphql-request";
 
 const dev = process.env.NODE_ENV !== "production";
 
-export const api = dev ? "http://localhost:1337" : "";
+export const api = dev ? "http://localhost:1337" : "http://localhost:1337";
 export const client = new GraphQLClient(
-  dev ? "http://localhost:1337/graphql" : ""
+  dev ? "http://localhost:1337/graphql" : "http://localhost:1337/graphql"
 );
