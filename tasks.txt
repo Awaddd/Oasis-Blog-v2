@@ -3,6 +3,7 @@
 # footer social links from cms
 # short author bio from cms
 # author images from cms
+# real date on article page (created, published or updated date?)
 # optimise more images
 # fixed footer (shows when there isn't alot of content)
 # clean up
@@ -15,11 +16,14 @@ later:
 could:
 # tags?
 # refine the image blur
+# newsletter text from cms
 
 minor:
 # brand logo should be a link to home
 
 done (listed):
+# deploy strapi
+# deploy next
 # category page title
 # optimise artile image
 # footer social links
