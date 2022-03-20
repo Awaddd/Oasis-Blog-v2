@@ -1,0 +1,24 @@
+Done
+
+general:
+# setup digital ocean droplet -d
+# make sure certificates are in place -d
+# connect frontend to backend -d
+# migrate dummy content from old droplet -d
+# migrate domain -d
+# add db -d
+
+must have:
+# articles cannot be static - unable to see new articles added -d (added static regeneration)
+# setup database -d
+# logo redirect to home -d
+# mobile burger menu -d
+# random url that is not a category should be handled (site breaks) -d
+# 404 page for bad urls -d
+# author profile page -d
+
+should have:
+
+could have:
+
+won't have:

@@ -1,0 +1,34 @@
+clean up & new features
+
+must have:
+
+# real date on article page
+# real author name everywhere
+# make sure footer sticks to bottom (empty category page)
+# auth - allow client to login and be able to force static regeneration (revalidation is too expensive)
+
+should have:
+# social icons (make social links a relation to author)
+# author bio on home component
+# check images are optimised
+# improve brand logo/ font
+# reverse order on home articles
+# categories should be a menu
+
+could have:
+# newsletter
+# make nav static
+# improve sidebar design
+
+won't have:
+# comments
+# user login
+# tags
+
+questions:
+# are all images optimised?
+
+links:
+# setup db
+https://docs.digitalocean.com/products/app-platform/how-to/manage-databases/
+https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/digitalocean-app-platform.html#configure-your-strapi-project-for-deployment
