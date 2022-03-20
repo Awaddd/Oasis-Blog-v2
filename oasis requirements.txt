@@ -2,23 +2,21 @@ clean up & new features
 
 must have:
 
-# real date on article page
-# real author name everywhere
 # make sure footer sticks to bottom (empty category page)
 # auth - allow client to login and be able to force static regeneration (revalidation is too expensive)
+# books and book pages
 
 should have:
-# social icons (make social links a relation to author)
-# author bio on home component
+# author profile pic on home bio
 # check images are optimised
 # improve brand logo/ font
 # reverse order on home articles
-# categories should be a menu
+# newsletter
 
 could have:
-# newsletter
 # make nav static
 # improve sidebar design
+# categories should be a menu
 
 won't have:
 # comments

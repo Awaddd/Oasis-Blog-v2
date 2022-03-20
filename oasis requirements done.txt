@@ -16,8 +16,12 @@ must have:
 # random url that is not a category should be handled (site breaks) -d
 # 404 page for bad urls -d
 # author profile page -d
+# real date everywhere -d
+# real author name everywhere -d
 
 should have:
+# social icons (make social links a relation to author) -d
+# author bio on home component -d
 
 could have:
 
