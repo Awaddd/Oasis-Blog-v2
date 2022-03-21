@@ -5,18 +5,16 @@ must have:
 # make sure footer sticks to bottom (empty category page)
 # auth - allow client to login and be able to force static regeneration (revalidation is too expensive)
 # books and book pages
+# find somewhere to store images so they are not lost on every push to oasis-backend
+# newsletter
 
 should have:
-# author profile pic on home bio
 # check images are optimised
 # improve brand logo/ font
-# reverse order on home articles
-# newsletter
 
 could have:
 # make nav static
 # improve sidebar design
-# categories should be a menu
 
 won't have:
 # comments

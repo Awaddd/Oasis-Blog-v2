@@ -18,10 +18,16 @@ must have:
 # author profile page -d
 # real date everywhere -d
 # real author name everywhere -d
+# email mailto -d
+# add hover to nav links (including the brand) and remove outline
 
 should have:
 # social icons (make social links a relation to author) -d
 # author bio on home component -d
+# remove social links click blue highlight/ border
+# reverse order on home articles
+# author profile pic on home bio
+# refine cta transition on home featured article
 
 could have:
 
