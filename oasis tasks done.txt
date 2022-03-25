@@ -28,6 +28,8 @@ should have:
 # reverse order on home articles
 # author profile pic on home bio
 # refine cta transition on home featured article
+# show category on slug (as tag?)
+# make category links a menu on the nav
 
 could have:
 

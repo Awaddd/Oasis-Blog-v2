@@ -2,11 +2,11 @@ clean up & new features
 
 must have:
 
-# make sure footer sticks to bottom (empty category page)
 # auth - allow client to login and be able to force static regeneration (revalidation is too expensive)
 # books and book pages
 # find somewhere to store images so they are not lost on every push to oasis-backend
 # newsletter
+# make sure footer sticks to bottom (empty category page)
 
 should have:
 # check images are optimised
