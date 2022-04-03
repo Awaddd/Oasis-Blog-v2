@@ -3,23 +3,26 @@ clean up & new features
 must have:
 
 # auth - allow client to login and be able to force static regeneration (revalidation is too expensive)
-# books and book pages
 # find somewhere to store images so they are not lost on every push to oasis-backend
 # newsletter
 # make sure footer sticks to bottom (empty category page)
+# new content type for books
+# expand featured post support to also include the new content type
 
 should have:
 # check images are optimised
 # improve brand logo/ font
+# share links on article page
 
 could have:
-# make nav static
 # improve sidebar design
+# make featured post read more button have a dynamic label (i.e. read more/ learn more/ find out more) set from cms
 
 won't have:
 # comments
 # user login
 # tags
+# make nav static
 
 questions:
 # are all images optimised?
