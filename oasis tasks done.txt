@@ -24,6 +24,8 @@ must have:
 # expand featured post support to also include the new content type
 # find somewhere to store images so they are not lost on every push to oasis-backend
 # support new cloud image paths on the frontend
+# on demand incremental static regeneration (revalidation is too expensive)
+# make sure footer sticks to bottom
 
 should have:
 # social icons (make social links a relation to author) -d

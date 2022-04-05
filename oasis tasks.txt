@@ -2,9 +2,7 @@ clean up & new features
 
 must have:
 
-# on demand incremental static regeneration (revalidation is too expensive)
 # newsletter
-# make sure footer sticks to bottom (empty category page)
 
 should have:
 # check images are optimised
