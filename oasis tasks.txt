@@ -3,11 +3,9 @@ clean up & new features
 must have:
 
 # auth - allow client to login and be able to force static regeneration (revalidation is too expensive)
-# find somewhere to store images so they are not lost on every push to oasis-backend
 # newsletter
 # make sure footer sticks to bottom (empty category page)
-# new content type for books
-# expand featured post support to also include the new content type
+# support new cloud image paths on the frontend
 
 should have:
 # check images are optimised
