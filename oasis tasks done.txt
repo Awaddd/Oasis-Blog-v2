@@ -36,6 +36,7 @@ should have:
 # refine cta transition on home featured article
 # show category on slug (as tag?)
 # make category links a menu on the nav
+# check images are optimised
 
 could have:
 

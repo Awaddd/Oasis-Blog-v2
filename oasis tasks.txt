@@ -3,13 +3,14 @@ clean up & new features
 must have:
 
 # newsletter
+# secure the nextjs /api/rebuild route with a secret key
 
 should have:
-# check images are optimised
 # improve brand logo/ font
 # share links on article page
 # auth
 # comments
+# go to category i.e. journals and click on one, next page will have the url /article/abc instead of /journal/abc
 
 could have:
 # improve sidebar design
