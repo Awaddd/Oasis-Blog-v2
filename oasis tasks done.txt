@@ -26,6 +26,7 @@ must have:
 # support new cloud image paths on the frontend
 # on demand incremental static regeneration (revalidation is too expensive)
 # make sure footer sticks to bottom
+# optimise lighthouse (varies, 100, 100, 100)
 
 should have:
 # social icons (make social links a relation to author) -d
